@@ -3961,6 +3961,53 @@ def inject_css():
             border-color: #DFD8F3 !important;
             color: var(--taupe) !important;
         }}
+        .st-key-reader_bunny_art [data-testid="stHorizontalBlock"] {{
+            display: grid !important;
+            grid-template-columns: minmax(0, 1fr) minmax(0, 1.65fr) minmax(0, 1fr) !important;
+            align-items: center !important;
+            gap: 6px !important;
+        }}
+        .st-key-reader_bunny_art [data-testid="stColumn"],
+        .st-key-reader_bunny_art [data-testid="column"] {{
+            width: 100% !important;
+            min-width: 0 !important;
+        }}
+
+        /* Fixed controls, with matching space above the scrollable content. */
+        .st-key-bunny_navigation,
+        .st-key-reader_fixed_audio {{
+            position: fixed !important;
+            left: 50% !important;
+            transform: translateX(-50%);
+            width: min(728px, calc(100% - 28px)) !important;
+            max-width: 728px !important;
+            background: #FFFDFC !important;
+            box-sizing: border-box !important;
+        }}
+        .st-key-bunny_navigation {{
+            top: 0 !important;
+            height: calc(64px + env(safe-area-inset-top, 0px)) !important;
+            padding: calc(8px + env(safe-area-inset-top, 0px)) 0 8px !important;
+            z-index: 1001 !important;
+        }}
+        .st-key-bunny_navigation .stButton > button {{
+            height: 48px !important;
+        }}
+        .st-key-reader_fixed_audio {{
+            top: calc(64px + env(safe-area-inset-top, 0px)) !important;
+            height: 100px !important;
+            padding: 4px 0 !important;
+            z-index: 1000 !important;
+        }}
+        .block-container {{
+            padding-top: calc(80px + env(safe-area-inset-top, 0px)) !important;
+        }}
+        .block-container:has(.st-key-reader_fixed_audio) {{
+            padding-top: calc(176px + env(safe-area-inset-top, 0px)) !important;
+        }}
+        [data-testid="stMain"] {{
+            scroll-padding-top: calc(176px + env(safe-area-inset-top, 0px));
+        }}
         </style>
         """,
         unsafe_allow_html=True,
@@ -4900,21 +4947,6 @@ def render_reader():
 
     with st.container(key="reader_heading_controls"):
         top = st.columns([2, 0.7, 0.7], gap="small")
-        with top[0]:
-            st.markdown(
-                f'<div style="padding-top:10px;font-size:13px;color:{CI["muted"]};">'
-                f'Chapter {idx + 1} / {len(book["chapters"])}</div>',
-                unsafe_allow_html=True,
-            )
-
-        with top[1]:
-            if st.button("Aa", key="font_button"):
-                if st.session_state.font_size >= 23:
-                    st.session_state.font_size = 17
-                else:
-                    st.session_state.font_size += 2
-                st.rerun()
-
         bookmarked = is_bookmarked(book["book_id"], chapter["chapter_id"])
         with top[2]:
             if st.button("♥" if bookmarked else "♡", key="bookmark_current"):
@@ -4924,7 +4956,8 @@ def render_reader():
     # Main reader controls stay at the top so they are reachable without scrolling.
     # Audio becomes a touch-friendly seek bar. Previous / Next remain directly below it.
     with st.container(key="reader_top_actions"):
-        render_tts_player(chapter["content"])
+        with st.container(key="reader_fixed_audio"):
+            render_tts_player(chapter["content"])
 
         reader_actions = st.columns(2, gap="small")
 
@@ -4947,11 +4980,26 @@ def render_reader():
 
     with st.container(key="reader_bunny_art"):
         bunny_cols = st.columns([1, 1.65, 1], gap="small")
+        with bunny_cols[0]:
+            st.markdown(
+                f'<div style="padding-top:10px;font-size:13px;color:{CI["muted"]};">'
+                f'Chapter {idx + 1} / {len(book["chapters"])}</div>',
+                unsafe_allow_html=True,
+            )
+
         with bunny_cols[1]:
             st.image(
                 str(ASSET_DIR / "reader_bunny.jpg"),
                 use_container_width=True,
             )
+
+        with bunny_cols[2]:
+            if st.button("Aa", key="font_button"):
+                if st.session_state.font_size >= 23:
+                    st.session_state.font_size = 17
+                else:
+                    st.session_state.font_size += 2
+                st.rerun()
 
     if st.session_state.reader_notice:
         st.markdown(

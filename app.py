@@ -3913,36 +3913,36 @@ def inject_css():
         .st-key-reader_top_actions .stButton > button p {{
             white-space: nowrap !important;
         }}
-        .st-key-nav_Home.stButton > button,
-        .st-key-nav_Home.stButton > button:hover,
-        .st-key-nav_Home.stButton > button:focus,
-        .st-key-nav_Home.stButton > button:active {{
-            background: #F6D4DF !important;
-            border-color: #F6D4DF !important;
+        .st-key-bunny_navigation [data-testid="stHorizontalBlock"] > :is([data-testid="stColumn"], [data-testid="column"]):nth-child(1) .stButton > button,
+        .st-key-bunny_navigation [data-testid="stHorizontalBlock"] > :is([data-testid="stColumn"], [data-testid="column"]):nth-child(1) .stButton > button:hover,
+        .st-key-bunny_navigation [data-testid="stHorizontalBlock"] > :is([data-testid="stColumn"], [data-testid="column"]):nth-child(1) .stButton > button:focus,
+        .st-key-bunny_navigation [data-testid="stHorizontalBlock"] > :is([data-testid="stColumn"], [data-testid="column"]):nth-child(1) .stButton > button:active {{
+            background: #E8C8D2 !important;
+            border-color: #E8C8D2 !important;
             color: var(--taupe) !important;
         }}
-        .st-key-nav_Library.stButton > button,
-        .st-key-nav_Library.stButton > button:hover,
-        .st-key-nav_Library.stButton > button:focus,
-        .st-key-nav_Library.stButton > button:active {{
-            background: #E4DCF5 !important;
-            border-color: #E4DCF5 !important;
+        .st-key-bunny_navigation [data-testid="stHorizontalBlock"] > :is([data-testid="stColumn"], [data-testid="column"]):nth-child(2) .stButton > button,
+        .st-key-bunny_navigation [data-testid="stHorizontalBlock"] > :is([data-testid="stColumn"], [data-testid="column"]):nth-child(2) .stButton > button:hover,
+        .st-key-bunny_navigation [data-testid="stHorizontalBlock"] > :is([data-testid="stColumn"], [data-testid="column"]):nth-child(2) .stButton > button:focus,
+        .st-key-bunny_navigation [data-testid="stHorizontalBlock"] > :is([data-testid="stColumn"], [data-testid="column"]):nth-child(2) .stButton > button:active {{
+            background: #D3DDC9 !important;
+            border-color: #D3DDC9 !important;
             color: var(--taupe) !important;
         }}
-        .st-key-nav_Add.stButton > button,
-        .st-key-nav_Add.stButton > button:hover,
-        .st-key-nav_Add.stButton > button:focus,
-        .st-key-nav_Add.stButton > button:active {{
-            background: #D6EAF7 !important;
-            border-color: #D6EAF7 !important;
+        .st-key-bunny_navigation [data-testid="stHorizontalBlock"] > :is([data-testid="stColumn"], [data-testid="column"]):nth-child(3) .stButton > button,
+        .st-key-bunny_navigation [data-testid="stHorizontalBlock"] > :is([data-testid="stColumn"], [data-testid="column"]):nth-child(3) .stButton > button:hover,
+        .st-key-bunny_navigation [data-testid="stHorizontalBlock"] > :is([data-testid="stColumn"], [data-testid="column"]):nth-child(3) .stButton > button:focus,
+        .st-key-bunny_navigation [data-testid="stHorizontalBlock"] > :is([data-testid="stColumn"], [data-testid="column"]):nth-child(3) .stButton > button:active {{
+            background: #DFCDBD !important;
+            border-color: #DFCDBD !important;
             color: var(--taupe) !important;
         }}
-        .st-key-nav_Bookmarks.stButton > button,
-        .st-key-nav_Bookmarks.stButton > button:hover,
-        .st-key-nav_Bookmarks.stButton > button:focus,
-        .st-key-nav_Bookmarks.stButton > button:active {{
-            background: #DDEDD6 !important;
-            border-color: #DDEDD6 !important;
+        .st-key-bunny_navigation [data-testid="stHorizontalBlock"] > :is([data-testid="stColumn"], [data-testid="column"]):nth-child(4) .stButton > button,
+        .st-key-bunny_navigation [data-testid="stHorizontalBlock"] > :is([data-testid="stColumn"], [data-testid="column"]):nth-child(4) .stButton > button:hover,
+        .st-key-bunny_navigation [data-testid="stHorizontalBlock"] > :is([data-testid="stColumn"], [data-testid="column"]):nth-child(4) .stButton > button:focus,
+        .st-key-bunny_navigation [data-testid="stHorizontalBlock"] > :is([data-testid="stColumn"], [data-testid="column"]):nth-child(4) .stButton > button:active {{
+            background: #EAD8CF !important;
+            border-color: #EAD8CF !important;
             color: var(--taupe) !important;
         }}
         .st-key-prev_chapter.stButton > button,
@@ -3961,18 +3961,6 @@ def inject_css():
             border-color: #DFD8F3 !important;
             color: var(--taupe) !important;
         }}
-        .st-key-reader_bunny_art [data-testid="stHorizontalBlock"] {{
-            display: grid !important;
-            grid-template-columns: minmax(0, 1fr) minmax(0, 1.65fr) minmax(0, 1fr) !important;
-            align-items: center !important;
-            gap: 6px !important;
-        }}
-        .st-key-reader_bunny_art [data-testid="stColumn"],
-        .st-key-reader_bunny_art [data-testid="column"] {{
-            width: 100% !important;
-            min-width: 0 !important;
-        }}
-
         /* Fixed controls, with matching space above the scrollable content. */
         .st-key-bunny_navigation,
         .st-key-reader_fixed_audio {{
@@ -3995,7 +3983,7 @@ def inject_css():
         }}
         .st-key-reader_fixed_audio {{
             top: calc(64px + env(safe-area-inset-top, 0px)) !important;
-            height: 100px !important;
+            height: 160px !important;
             padding: 4px 0 !important;
             z-index: 1000 !important;
         }}
@@ -4003,10 +3991,23 @@ def inject_css():
             padding-top: calc(80px + env(safe-area-inset-top, 0px)) !important;
         }}
         .block-container:has(.st-key-reader_fixed_audio) {{
-            padding-top: calc(176px + env(safe-area-inset-top, 0px)) !important;
+            padding-top: calc(236px + env(safe-area-inset-top, 0px)) !important;
         }}
         [data-testid="stMain"] {{
-            scroll-padding-top: calc(176px + env(safe-area-inset-top, 0px));
+            scroll-padding-top: calc(236px + env(safe-area-inset-top, 0px));
+        }}
+        .st-key-reader_fixed_audio .st-key-reader_font_row [data-testid="stHorizontalBlock"] {{
+            grid-template-columns: minmax(0, 1.8fr) repeat(4, minmax(0, 1fr)) !important;
+            align-items: center !important;
+        }}
+        .st-key-reader_font_row [data-testid="stMarkdownContainer"] p,
+        .st-key-reader_font_row [data-testid="stMarkdownContainer"] div {{
+            white-space: nowrap !important;
+            padding-top: 0 !important;
+        }}
+        .st-key-reader_font_row .stButton > button {{
+            width: 100% !important;
+            min-height: 44px !important;
         }}
         </style>
         """,
@@ -4945,19 +4946,42 @@ def render_reader():
     chapter = book["chapters"][idx]
     progress = calculate_progress(book, idx)
 
-    with st.container(key="reader_heading_controls"):
-        top = st.columns([2, 0.7, 0.7], gap="small")
-        bookmarked = is_bookmarked(book["book_id"], chapter["chapter_id"])
-        with top[2]:
-            if st.button("♥" if bookmarked else "♡", key="bookmark_current"):
-                toggle_bookmark(book, chapter)
-                st.rerun()
-
     # Main reader controls stay at the top so they are reachable without scrolling.
     # Audio becomes a touch-friendly seek bar. Previous / Next remain directly below it.
     with st.container(key="reader_top_actions"):
         with st.container(key="reader_fixed_audio"):
             render_tts_player(chapter["content"])
+            with st.container(key="reader_font_row"):
+                font_cols = st.columns([1.8, 1, 1, 1, 1], gap="small")
+                with font_cols[0]:
+                    st.markdown(
+                        f'<div style="padding-top:10px;font-size:13px;color:{CI["muted"]};">'
+                        f'Chapter {idx + 1} / {len(book["chapters"])}</div>',
+                        unsafe_allow_html=True,
+                    )
+
+                with font_cols[1]:
+                    if st.button("A−", key="font_minus"):
+                        st.session_state.font_size = max(15, st.session_state.font_size - 2)
+                        st.rerun()
+                with font_cols[2]:
+                    st.markdown(
+                        f'<div style="text-align:center;padding-top:12px;color:{CI["muted"]};">'
+                        f'{st.session_state.font_size}px</div>',
+                        unsafe_allow_html=True,
+                    )
+                with font_cols[3]:
+                    if st.button("A+", key="font_plus"):
+                        st.session_state.font_size = min(27, st.session_state.font_size + 2)
+                        st.rerun()
+
+
+                with font_cols[4]:
+                    bookmarked = is_bookmarked(book["book_id"], chapter["chapter_id"])
+                    if st.button("♥" if bookmarked else "♡", key="bookmark_current"):
+                        toggle_bookmark(book, chapter)
+                        st.rerun()
+
 
         reader_actions = st.columns(2, gap="small")
 
@@ -4980,26 +5004,11 @@ def render_reader():
 
     with st.container(key="reader_bunny_art"):
         bunny_cols = st.columns([1, 1.65, 1], gap="small")
-        with bunny_cols[0]:
-            st.markdown(
-                f'<div style="padding-top:10px;font-size:13px;color:{CI["muted"]};">'
-                f'Chapter {idx + 1} / {len(book["chapters"])}</div>',
-                unsafe_allow_html=True,
-            )
-
         with bunny_cols[1]:
             st.image(
                 str(ASSET_DIR / "reader_bunny.jpg"),
                 use_container_width=True,
             )
-
-        with bunny_cols[2]:
-            if st.button("Aa", key="font_button"):
-                if st.session_state.font_size >= 23:
-                    st.session_state.font_size = 17
-                else:
-                    st.session_state.font_size += 2
-                st.rerun()
 
     if st.session_state.reader_notice:
         st.markdown(
@@ -5020,21 +5029,6 @@ def render_reader():
         unsafe_allow_html=True,
     )
 
-    font_cols = st.columns(3, gap="small")
-    with font_cols[0]:
-        if st.button("A−", key="font_minus"):
-            st.session_state.font_size = max(15, st.session_state.font_size - 2)
-            st.rerun()
-    with font_cols[1]:
-        st.markdown(
-            f'<div style="text-align:center;padding-top:12px;color:{CI["muted"]};">'
-            f'{st.session_state.font_size}px</div>',
-            unsafe_allow_html=True,
-        )
-    with font_cols[2]:
-        if st.button("A+", key="font_plus"):
-            st.session_state.font_size = min(27, st.session_state.font_size + 2)
-            st.rerun()
 
 
 

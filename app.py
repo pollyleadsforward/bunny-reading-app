@@ -3687,55 +3687,6 @@ def inject_css():
         }}
 
 
-        /* ---------- TOP READER PASTEL-RAINBOW CONTROLS ---------- */
-        .st-key-reader_top_actions [data-testid="stHorizontalBlock"] > [data-testid="column"]:nth-child(1) .stButton > button {{
-            background: linear-gradient(
-                120deg,
-                #E2F3FA 0%,
-                #C7E3F2 34%,
-                #BFD7EA 67%,
-                #DADCF3 100%
-            ) !important;
-            border: 1px solid #AECEE2 !important;
-            color: var(--taupe) !important;
-            box-shadow: 0 5px 14px rgba(191,215,234,.25) !important;
-        }}
-
-        .st-key-reader_top_actions [data-testid="stHorizontalBlock"] > [data-testid="column"]:nth-child(1) .stButton > button:hover {{
-            background: linear-gradient(
-                120deg,
-                #D8EEF8 0%,
-                #BFDCEC 34%,
-                #B5D1E6 67%,
-                #CFD4EF 100%
-            ) !important;
-            border-color: #9FC3DA !important;
-        }}
-
-        .st-key-reader_top_actions [data-testid="stHorizontalBlock"] > [data-testid="column"]:nth-child(2) .stButton > button {{
-            background: linear-gradient(
-                120deg,
-                #F0E8F8 0%,
-                #DED4F1 34%,
-                #CFC7E8 67%,
-                #E7D9EF 100%
-            ) !important;
-            border: 1px solid #C5B9DF !important;
-            color: var(--taupe) !important;
-            box-shadow: 0 5px 14px rgba(207,199,232,.28) !important;
-        }}
-
-        .st-key-reader_top_actions [data-testid="stHorizontalBlock"] > [data-testid="column"]:nth-child(2) .stButton > button:hover {{
-            background: linear-gradient(
-                120deg,
-                #EADFF5 0%,
-                #D6C9EC 34%,
-                #C6BCE2 67%,
-                #E0CFEB 100%
-            ) !important;
-            border-color: #B8AAD7 !important;
-        }}
-
         .st-key-reader_top_actions .stButton > button:active,
         .st-key-reader_top_actions .stButton > button:focus,
         .st-key-reader_top_actions .stButton > button:focus-visible {{
@@ -3937,6 +3888,78 @@ def inject_css():
             [data-testid="column"] {{
                 min-width: 0 !important;
             }}
+        }}
+
+        /* Keep reader controls on three compact rows on mobile. */
+        .st-key-reader_heading_controls [data-testid="stHorizontalBlock"],
+        .st-key-reader_top_actions [data-testid="stHorizontalBlock"] {{
+            display: grid !important;
+            gap: 6px !important;
+            width: 100% !important;
+        }}
+        .st-key-reader_heading_controls [data-testid="stHorizontalBlock"] {{
+            grid-template-columns: minmax(0, 2fr) repeat(2, minmax(0, .7fr)) !important;
+        }}
+        .st-key-reader_top_actions [data-testid="stHorizontalBlock"] {{
+            grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        }}
+        .st-key-reader_heading_controls [data-testid="stColumn"],
+        .st-key-reader_heading_controls [data-testid="column"],
+        .st-key-reader_top_actions [data-testid="stColumn"],
+        .st-key-reader_top_actions [data-testid="column"] {{
+            width: 100% !important;
+            min-width: 0 !important;
+        }}
+        .st-key-reader_top_actions .stButton > button p {{
+            white-space: nowrap !important;
+        }}
+        .st-key-nav_Home.stButton > button,
+        .st-key-nav_Home.stButton > button:hover,
+        .st-key-nav_Home.stButton > button:focus,
+        .st-key-nav_Home.stButton > button:active {{
+            background: #F6D4DF !important;
+            border-color: #F6D4DF !important;
+            color: var(--taupe) !important;
+        }}
+        .st-key-nav_Library.stButton > button,
+        .st-key-nav_Library.stButton > button:hover,
+        .st-key-nav_Library.stButton > button:focus,
+        .st-key-nav_Library.stButton > button:active {{
+            background: #E4DCF5 !important;
+            border-color: #E4DCF5 !important;
+            color: var(--taupe) !important;
+        }}
+        .st-key-nav_Add.stButton > button,
+        .st-key-nav_Add.stButton > button:hover,
+        .st-key-nav_Add.stButton > button:focus,
+        .st-key-nav_Add.stButton > button:active {{
+            background: #D6EAF7 !important;
+            border-color: #D6EAF7 !important;
+            color: var(--taupe) !important;
+        }}
+        .st-key-nav_Bookmarks.stButton > button,
+        .st-key-nav_Bookmarks.stButton > button:hover,
+        .st-key-nav_Bookmarks.stButton > button:focus,
+        .st-key-nav_Bookmarks.stButton > button:active {{
+            background: #DDEDD6 !important;
+            border-color: #DDEDD6 !important;
+            color: var(--taupe) !important;
+        }}
+        .st-key-prev_chapter.stButton > button,
+        .st-key-prev_chapter.stButton > button:hover,
+        .st-key-prev_chapter.stButton > button:focus,
+        .st-key-prev_chapter.stButton > button:active {{
+            background: #FFF0CE !important;
+            border-color: #FFF0CE !important;
+            color: var(--taupe) !important;
+        }}
+        .st-key-next_chapter.stButton > button,
+        .st-key-next_chapter.stButton > button:hover,
+        .st-key-next_chapter.stButton > button:focus,
+        .st-key-next_chapter.stButton > button:active {{
+            background: #DFD8F3 !important;
+            border-color: #DFD8F3 !important;
+            color: var(--taupe) !important;
         }}
         </style>
         """,
@@ -4875,32 +4898,28 @@ def render_reader():
     chapter = book["chapters"][idx]
     progress = calculate_progress(book, idx)
 
-    top = st.columns([1.15, 1.65, 0.7, 0.7], gap="small")
-    with top[0]:
-        if st.button("← Back", key="reader_back"):
-            st.session_state.page = "Library"
-            st.rerun()
+    with st.container(key="reader_heading_controls"):
+        top = st.columns([2, 0.7, 0.7], gap="small")
+        with top[0]:
+            st.markdown(
+                f'<div style="padding-top:10px;font-size:13px;color:{CI["muted"]};">'
+                f'Chapter {idx + 1} / {len(book["chapters"])}</div>',
+                unsafe_allow_html=True,
+            )
 
-    with top[1]:
-        st.markdown(
-            f'<div style="padding-top:10px;font-size:13px;color:{CI["muted"]};">'
-            f'Chapter {idx + 1} / {len(book["chapters"])}</div>',
-            unsafe_allow_html=True,
-        )
+        with top[1]:
+            if st.button("Aa", key="font_button"):
+                if st.session_state.font_size >= 23:
+                    st.session_state.font_size = 17
+                else:
+                    st.session_state.font_size += 2
+                st.rerun()
 
-    with top[2]:
-        if st.button("Aa", key="font_button"):
-            if st.session_state.font_size >= 23:
-                st.session_state.font_size = 17
-            else:
-                st.session_state.font_size += 2
-            st.rerun()
-
-    bookmarked = is_bookmarked(book["book_id"], chapter["chapter_id"])
-    with top[3]:
-        if st.button("♥" if bookmarked else "♡", key="bookmark_current"):
-            toggle_bookmark(book, chapter)
-            st.rerun()
+        bookmarked = is_bookmarked(book["book_id"], chapter["chapter_id"])
+        with top[2]:
+            if st.button("♥" if bookmarked else "♡", key="bookmark_current"):
+                toggle_bookmark(book, chapter)
+                st.rerun()
 
     # Main reader controls stay at the top so they are reachable without scrolling.
     # Audio becomes a touch-friendly seek bar. Previous / Next remain directly below it.
@@ -4911,13 +4930,13 @@ def render_reader():
 
         with reader_actions[0]:
             prev_disabled = idx <= 0
-            if st.button("← Previous", key="prev_chapter", disabled=prev_disabled):
+            if st.button("← Previous", key="prev_chapter", disabled=prev_disabled, use_container_width=True):
                 open_chapter(idx - 1)
                 st.rerun()
 
         with reader_actions[1]:
             next_disabled = idx >= len(book["chapters"]) - 1
-            if st.button("Next →", key="next_chapter", disabled=next_disabled):
+            if st.button("Next →", key="next_chapter", disabled=next_disabled, use_container_width=True):
                 open_chapter(idx + 1)
                 st.rerun()
 

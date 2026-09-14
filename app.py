@@ -3386,7 +3386,7 @@ def inject_css():
         }}
 
         [data-testid="stHeader"] {{
-            background: rgba(247,241,234,.90);
+            display: none !important;
         }}
 
         [data-testid="stToolbar"] {{
@@ -3856,8 +3856,28 @@ def inject_css():
         }}
 
         /* ---------- MOBILE NAV ---------- */
-        .nav-wrap {{
-            margin: 6px 0 14px;
+        .st-key-bunny_navigation [data-testid="stHorizontalBlock"] {{
+            display: grid !important;
+            grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+            gap: 6px !important;
+            width: 100% !important;
+        }}
+
+        .st-key-bunny_navigation [data-testid="stColumn"],
+        .st-key-bunny_navigation [data-testid="column"] {{
+            width: 100% !important;
+            min-width: 0 !important;
+        }}
+
+        .st-key-bunny_navigation .stButton > button {{
+            width: 100% !important;
+            min-height: 46px !important;
+            padding: 8px 2px !important;
+        }}
+
+        .st-key-bunny_navigation .stButton > button p {{
+            font-size: clamp(11px, 3.2vw, 14px) !important;
+            white-space: nowrap !important;
         }}
 
         @media (max-width: 520px) {{
@@ -3928,19 +3948,19 @@ def inject_css():
 # NAVIGATION
 # =========================================================
 def render_navigation():
-    st.markdown('<div class="nav-wrap"></div>', unsafe_allow_html=True)
-    cols = st.columns(4, gap="small")
-    items = [
-        ("Home", "⌂ Home"),
-        ("Library", "▤ Library"),
-        ("Add", "＋ Add"),
-        ("Bookmarks", "♡ Saved"),
-    ]
-    for col, (page, label) in zip(cols, items):
-        with col:
-            if st.button(label, key=f"nav_{page}", use_container_width=True):
-                st.session_state.page = page
-                st.rerun()
+    with st.container(key="bunny_navigation"):
+        cols = st.columns(4, gap="small")
+        items = [
+            ("Home", "⌂ Home"),
+            ("Library", "▤ Library"),
+            ("Add", "＋ Add"),
+            ("Bookmarks", "♡ Saved"),
+        ]
+        for col, (page, label) in zip(cols, items):
+            with col:
+                if st.button(label, key=f"nav_{page}", use_container_width=True):
+                    st.session_state.page = page
+                    st.rerun()
 
 
 # =========================================================

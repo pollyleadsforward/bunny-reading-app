@@ -11,7 +11,6 @@ import streamlit.components.v1 as components
 from bs4 import BeautifulSoup
 from docx import Document
 from pypdf import PdfReader
-from supabase import create_client
 
 
 # =========================================================
@@ -3061,169 +3060,302 @@ DEMO_BOOKS = [{'book_id': 'product-development-interview-prep',
                            '\n'
                            '                                      END OF BOOTCAMP\n'
                            '         เป้าหมายต่อไป: ลงมือทำ Portfolio 1-2 projects และสะสม '
-                           'technical delivery experience จริง'}]}]
+                           'technical delivery experience จริง'}]},
+ {'book_id': 'problem-solving-series-i',
+  'title': 'Problem Solving Series I',
+  'subtitle': 'Personal Development',
+  'author': 'Polly Chen',
+  'content_type': 'Book',
+  'category': 'Personal Development',
+  'description': '',
+  'cover_emoji': '📖',
+  'chapters': [{'chapter_id': 'problem-solving-series-i',
+                'chapter_title': 'Problem Solving Series I',
+                'order': 1,
+                'content': '1. **How do you define a good product strategy?** \n'
+                           '   **Core answer:** “A good product strategy should balance customer '
+                           'needs, business growth, risk, and execution feasibility.” \n'
+                           '   **Example:** “For lending, I would also look at whether the product '
+                           'creates customer value while maintaining sustainable risk-adjusted '
+                           'profitability.” \n'
+                           '   🔐 **Key:** Customer → Business → Risk → Execution \n'
+                           ' \n'
+                           '2. **How do you prioritize when everything is urgent?** \n'
+                           '   **Core answer:** “I prioritize based on customer impact, business '
+                           'impact, risk, and urgency, then align stakeholders on what must be '
+                           'done first.” \n'
+                           '   **Example:** “When several issues happen at the same time, I '
+                           'separate immediate customer impact from issues that can wait for a '
+                           'longer-term fix.” \n'
+                           '   🔐 **Key:** Customer → Business → Risk → Urgency \n'
+                           ' \n'
+                           '3. **Tell me about a difficult problem you solved.** \n'
+                           '   **Core answer:** “I clarify the real problem, identify the root '
+                           'cause, align the right teams, solve the immediate issue, and then '
+                           'define preventive actions.” \n'
+                           '   **Example:** “For incidents, I don’t stop after fixing the customer '
+                           'impact. I also make sure we understand why it happened and how to '
+                           'prevent recurrence.” \n'
+                           '   🔐 **Key:** Problem → Root cause → Align → Fix → Prevent \n'
+                           ' \n'
+                           '4. **How do you handle disagreement with stakeholders?** \n'
+                           '   **Core answer:** “I bring the discussion back to the objective and '
+                           'decision criteria, and focus on facts, impact, and trade-offs rather '
+                           'than personal opinions.” \n'
+                           '   **Example:** “If teams have different views, I clarify what we are '
+                           'trying to achieve and what risks or customer impacts come with each '
+                           'option.” \n'
+                           '   🔐 **Key:** Objective → Facts → Impact → Trade-off \n'
+                           ' \n'
+                           '5. **How would you manage your team?** \n'
+                           '   **Core answer:** “I give clear direction and expected outcomes, but '
+                           'I give the team space to think and execute.” \n'
+                           '   **Example:** “My role is to coach, remove blockers, challenge their '
+                           'thinking when needed, and help close gaps rather than doing everything '
+                           'myself.” \n'
+                           '   🔐 **Key:** Direction → Empower → Coach → Unblock \n'
+                           ' \n'
+                           '6. **What is your biggest strength?** \n'
+                           '   **Core answer:** “My strength is managing complex lending products '
+                           'end-to-end, bringing different stakeholders together, and turning '
+                           'unclear problems into clear decisions and actions.” \n'
+                           '   **Example:** “A lot of my work involves situations where ownership '
+                           'or the root cause is unclear, so I help structure the problem and move '
+                           'everyone toward a decision.” \n'
+                           '   🔐 **Key:** Complex → Align → Clear decision \n'
+                           ' \n'
+                           '7. **What is one area you want to improve?** \n'
+                           '   **Core answer:** “One area I’m still developing is how to apply AI '
+                           'more effectively in my day-to-day work.” \n'
+                           '   **Example:** “I’ve been learning and experimenting with AI, but I '
+                           'believe there is still more I can do to integrate it into product '
+                           'management, analysis, and productivity.” \n'
+                           '   🔐 **Key:** Learn AI → Experiment → Apply → Productivity \n'
+                           ' \n'
+                           '8. **Why should we hire you?** \n'
+                           '   **Core answer:** “I can help the team turn strategy into execution, '
+                           'while also creating an environment where people can work effectively '
+                           'and happily.” \n'
+                           '   **Example:** “I’m not the most talkative person, but I understand '
+                           'people quite well. I can read the situation, understand what people '
+                           'need, and help stabilize the team when things become difficult. I '
+                           'believe I bring both execution capability and a human touch to '
+                           'leadership.” \n'
+                           '   🔐 **Key:** Strategy → Execution → Happy Team → Stabilize → Human '
+                           'Touch'}]},
+ {'book_id': 'structural-thinking-for-reasoning-complexity-idea',
+  'title': 'Structural Thinking for Reasoning Complexity Idea',
+  'subtitle': 'Personal Development Series I',
+  'author': 'Polly Chen',
+  'content_type': 'Book',
+  'category': 'Personal Development Series I',
+  'description': '',
+  'cover_emoji': '📖',
+  'chapters': [{'chapter_id': 'structural-thinking-for-reasoning-complexity-idea',
+                'chapter_title': 'Structural Thinking for Reasoning Complexity Idea',
+                'order': 1,
+                'content': 'อยากให้คุณพอลลี่จำ “ประโยคแกน” พวกนี้ไว้ แล้ววนใช้ตลอดการสัมภาษณ์ได้เลย: \n'
+                           ' \n'
+                           'เวลาคุณพอลลี่จะเริ่มตอบ: “From my perspective…”, “The key point is…”, “What I '
+                           'would focus on is…”, “The way I see it…” \n'
+                           ' \n'
+                           'เวลาคุณพอลลี่จะจัดคำตอบ: “There are two things I would consider.” / “I would '
+                           'look at this from three perspectives.” / “First…, second…, and '
+                           'finally…” \n'
+                           ' \n'
+                           'เวลาคุณพอลลี่อธิบายวิธีคิด: “The way I would approach this is…” / “I would '
+                           'start by understanding the problem first.” / “Before making a '
+                           'decision, I would look at the customer, risk, and business impact.” \n'
+                           ' \n'
+                           'เวลาคุณพอลลี่จะบอกเหตุผล: “The reason is…” / “Because at the end of the day…” / '
+                           '“What matters here is…” \n'
+                           ' \n'
+                           'เวลาคุณพอลลี่ยกตัวอย่าง: “For example…” / “One example from my current role '
+                           'is…” / “I had a similar situation before.” \n'
+                           ' \n'
+                           'เวลาคุณพอลลี่เล่าบทบาทตัวเองแบบ Senior: “My role was to bring everyone to the '
+                           'same understanding.” / “I helped the team clarify the problem and '
+                           'agree on the next step.” / “I drove the discussion toward a decision.” '
+                           '/ “I didn’t do everything myself. I made sure the right people could '
+                           'move forward.” \n'
+                           ' \n'
+                           'เวลาคุณพอลลี่อยากเน้น: “For me, this is very important.” / “This is actually '
+                           'one of the key points.” / “That’s where I think I can add value.” \n'
+                           ' \n'
+                           'เวลาคุณพอลลี่ไม่เข้าใจคำถาม: “Could you please repeat the question?” / “If I '
+                           'understand your question correctly, you’re asking about… right?” / “Do '
+                           'you mean from a product perspective or a people-management '
+                           'perspective?” \n'
+                           ' \n'
+                           'เวลาคุณพอลลี่ต้องการคิด: “That’s a good question. Let me think for a moment.” / '
+                           '“Let me structure my thoughts.” / “I would probably look at it this '
+                           'way.” \n'
+                           ' \n'
+                           'เวลาคุณพอลลี่ยังไม่มีประสบการณ์ตรง: “I haven’t handled that specific case '
+                           'directly, but I would approach it by…” / “That’s not something I’ve '
+                           'worked on directly, but the principle is quite similar to…” \n'
+                           ' \n'
+                           'เวลาคุณพอลลี่จะสรุป: “So overall…” / “So my main point is…” / “That would be my '
+                           'approach.” / “That’s how I would handle it.” \n'
+                           ' \n'
+                           'เวลาคุณพอลลี่พูดเรื่อง leadership: “I try to give the team clarity, not just '
+                           'tasks.” / “My role as a leader is to remove blockers and help the team '
+                           'make better decisions.” / “I give direction, but I also give people '
+                           'room to think.” \n'
+                           ' \n'
+                           'เวลาคุณพอลลี่เจอ disagreement: “I try to understand the concern first.” / “I '
+                           'would bring the discussion back to the objective.” / “We may have '
+                           'different views, but we need to agree on the decision criteria.” \n'
+                           ' \n'
+                           'เวลาคุณพอลลี่ไม่รู้ตัวเลขเป๊ะ: “I don’t have the exact number with me, but…” / '
+                           '“I don’t want to give you an inaccurate number, but the overall trend '
+                           'was…” \n'
+                           ' \n'
+                           'เวลาคุณพอลลี่จะปิดคำตอบอย่างมั่นใจ: “And that’s where I believe my experience '
+                           'can contribute.” / “That experience taught me how to manage complexity '
+                           'across different teams.” \n'
+                           ' \n'
+                           ' \n'
+                           'มีอีกอย่างที่ฉันอยากให้คุณพอลลี่จำมากกว่า grammar คือ โครง 4 ประโยค นี้ '
+                           'เพราะใช้ตอบได้แทบทุกคำถาม: \n'
+                           ' \n'
+                           '1. Conclusion: “The key point is…” \n'
+                           '2. Reason: “The reason is…” \n'
+                           '3. Example: “For example, in my current role…” \n'
+                           '4. Result: “So the outcome was…” \n'
+                           ' \n'
+                           'เช่น ถ้าถามว่า How do you manage stakeholders? \n'
+                           ' \n'
+                           'คุณไม่ต้องพยายามพูดภาษาอังกฤษสวย ๆ เลย: \n'
+                           ' \n'
+                           '> “The key point for me is alignment. I make sure everyone understands '
+                           'the same problem and the same goal. For example, when I work with '
+                           'business, IT and operations, I bring them together to clarify the '
+                           'issue and agree on the next step. So even though I don’t have '
+                           'authority over them, we can still move the work forward.” \n'
+                           ' \n'
+                           ' \n'
+                           ' \n'
+                           'ภาษาแบบนี้ ธรรมดามาก แต่ความคิดชัดมากค่ะ สู้ๆค่ะคุณพอลลี่'}]},
+ {'book_id': 'tell-me-about-yourself',
+  'title': 'Tell Me About Yourself',
+  'subtitle': 'Personal Development Series I',
+  'author': 'Polly Chen',
+  'content_type': 'Book',
+  'category': 'Personal Development Series I',
+  'description': '',
+  'cover_emoji': '📖',
+  'chapters': [{'chapter_id': 'tell-me-about-yourself-personal',
+                'chapter_title': 'Tell Me About Yourself',
+                'order': 1,
+                'content': 'I’m currently working at Siam Commercial Bank in Digital Lending.\n'
+                           '\n'
+                           'My background started from customer-facing and lending sales, so I '
+                           'understand customer behavior and frontline challenges quite well. I '
+                           'also had one year of people management experience, leading a mobility '
+                           'team of around 10 people in lending sales.\n'
+                           '\n'
+                           'I later moved into Product Management, where I now manage digital '
+                           'lending end-to-end across product, process, operations, regulatory '
+                           'requirements, incidents, and system migration.\n'
+                           '\n'
+                           'A big part of my role is leading cross-functional initiatives without '
+                           'direct authority. I clarify the problem, set the direction, bring the '
+                           'right stakeholders together, and drive decisions so the work can move '
+                           'forward.\n'
+                           '\n'
+                           'Overall, I would say my key strength is managing complex lending '
+                           'products end-to-end, aligning different stakeholders, and turning '
+                           'unclear problems into clear decisions and actions.  🔐 Sales → People '
+                           'Leadership → Product → End-to-End → Set Direction → Drive Decision'}]},
+ {'book_id': 'talk-with-matthew',
+  'title': 'คุยกับน้องแม็ท',
+  'subtitle': 'Bedtime & Growing Up Stories',
+  'author': 'Polly Chen',
+  'content_type': 'Book',
+  'category': 'Family',
+  'description': 'เรื่องสั้นสำหรับคุยกับน้องแม็ทก่อนนอนและช่วยฝึกการดูแลตัวเอง',
+  'cover_emoji': '🐰',
+  'chapters': [
+      {'chapter_id': 'matthew-bedtime',
+       'chapter_title': 'น้องแม็ทเข้านอนให้ไว',
+       'order': 1,
+       'content': '''น้องแม็ทคะ คุณครูกิ๊ฟบอกว่า ให้น้องแม็ทนอนให้ไว เราต้องไปอาบน้ำแปรงฟันแล้วนะคะ
 
+ถึงเวลากินนมนอนให้นอนเราจะไม่เล่นแล้วนะคะ
 
-# =========================================================
-# PERSISTENT STORAGE (SUPABASE)
-# =========================================================
-@st.cache_resource
-def get_supabase_client():
-    """Create one server-side Supabase client per Streamlit process."""
-    try:
-        url = str(st.secrets["SUPABASE_URL"]).strip()
-        key = str(st.secrets["SUPABASE_KEY"]).strip()
-    except Exception:
-        return None
-    if not url or not key:
-        return None
-    return create_client(url, key)
+Annalu also saids Matthew will be a good boy.
 
+คืนนี้น้องแม็ททำทุกอย่างให้เสร็จเร็ว ๆ นะคะ อาบน้ำให้สะอาด แปรงฟันให้สะอาด ใส่ชุดนอน แล้วขึ้นเตียง
 
-def storage_owner() -> str:
-    try:
-        owner = str(st.secrets["BUNNY_OWNER"]).strip()
-    except Exception:
-        owner = "polly"
-    return owner or "polly"
+ก่อนนอนเราสามารถเลือกนิทานหนึ่งเรื่อง แล้วคุณแม่จะอ่านให้น้องแม็ทฟัง
 
+พออ่านนิทานจบ เราจะปิดไฟ หลับตา และพักผ่อนให้ร่างกายแข็งแรง
 
-def storage_is_configured() -> bool:
-    return get_supabase_client() is not None
+ถ้าน้องแม็ทนอนเร็ว พรุ่งนี้ตอนเช้าน้องแม็ทจะตื่นมาสดชื่น มีแรงไปโรงเรียน มีแรงเล่นกับเพื่อน และมีแรงเรียนรู้สิ่งใหม่ ๆ
 
+คุณครูกิ๊ฟจะดีใจที่น้องแม็ทพักผ่อนเพียงพอ
 
-def load_persistent_state():
-    """Load user-imported books, reading progress, and bookmarks.
+คุณแม่ก็จะดีใจเหมือนกัน เพราะน้องแม็ทกำลังเรียนรู้ที่จะดูแลตัวเอง
 
-    Built-in DEMO_BOOKS remain in source code; only user-created data and
-    user state are stored in Supabase.
-    """
-    client = get_supabase_client()
-    if client is None:
-        return {"books": [], "last_read": {}, "bookmarks": []}, None
+คืนนี้เราไม่ต้องรีบนอนให้หลับทันทีนะคะ แค่นอนนิ่ง ๆ กอดหมอน หายใจช้า ๆ แล้วพักผ่อน
 
-    owner = storage_owner()
-    try:
-        books_resp = (
-            client.table("bunny_books")
-            .select("book_data")
-            .eq("owner", owner)
-            .execute()
-        )
-        progress_resp = (
-            client.table("bunny_progress")
-            .select("book_id,chapter_index")
-            .eq("owner", owner)
-            .execute()
-        )
-        bookmarks_resp = (
-            client.table("bunny_bookmarks")
-            .select("bookmark_data")
-            .eq("owner", owner)
-            .execute()
-        )
+Good night, Matthew.
 
-        books = []
-        for row in books_resp.data or []:
-            book = row.get("book_data")
-            if isinstance(book, dict) and book.get("book_id"):
-                books.append(book)
+You did a good job today.
 
-        last_read = {}
-        for row in progress_resp.data or []:
-            book_id = row.get("book_id")
-            if book_id:
-                try:
-                    last_read[book_id] = max(0, int(row.get("chapter_index", 0)))
-                except (TypeError, ValueError):
-                    last_read[book_id] = 0
+Tomorrow is another happy day.'''
+      },
+      {'chapter_id': 'matthew-can-do-it',
+       'chapter_title': 'น้องแม็ททำเองได้',
+       'order': 2,
+       'content': '''น้องแม็ทโตขึ้นทุกวันแล้วนะคะ และมีหลายอย่างที่น้องแม็ทสามารถทำเองได้
 
-        bookmarks = []
-        for row in bookmarks_resp.data or []:
-            item = row.get("bookmark_data")
-            if isinstance(item, dict) and item.get("book_id") and item.get("chapter_id"):
-                bookmarks.append(item)
+ตอนเช้า เมื่อตื่นขึ้นมา น้องแม็ทลุกจากเตียง เก็บหมอน แล้วเดินไปล้างหน้า
 
-        return {"books": books, "last_read": last_read, "bookmarks": bookmarks}, None
-    except Exception as exc:
-        return {"books": [], "last_read": {}, "bookmarks": []}, str(exc)
+จากนั้นน้องแม็ทแปรงฟันและเตรียมตัวไปโรงเรียน
 
+ถ้ามีบางอย่างที่ยังทำไม่ได้ น้องแม็ทสามารถพูดว่า
 
-def persist_book(book):
-    client = get_supabase_client()
-    if client is None:
-        return False, "Supabase is not configured yet. Add SUPABASE_URL and SUPABASE_KEY in Streamlit Secrets."
+Mommy, can you help me please?
 
-    try:
-        client.table("bunny_books").upsert(
-            {
-                "owner": storage_owner(),
-                "book_id": book["book_id"],
-                "book_data": book,
-            },
-            on_conflict="owner,book_id",
-        ).execute()
-        return True, None
-    except Exception as exc:
-        return False, str(exc)
+การขอความช่วยเหลือไม่ใช่เรื่องน่าอายนะคะ เด็กเก่งไม่จำเป็นต้องทำทุกอย่างได้ตั้งแต่ครั้งแรก
 
+เด็กเก่งคือเด็กที่ลองทำก่อน ถ้าทำไม่ได้ก็ถาม แล้วเรียนรู้ว่าจะทำอย่างไรในครั้งต่อไป
 
-def persist_progress(book_id: str, chapter_index: int):
-    client = get_supabase_client()
-    if client is None:
-        return False, "Supabase is not configured."
+ที่โรงเรียน ถ้าน้องแม็ทไม่เข้าใจอะไร น้องแม็ทสามารถถามคุณครูได้
 
-    try:
-        client.table("bunny_progress").upsert(
-            {
-                "owner": storage_owner(),
-                "book_id": book_id,
-                "chapter_index": max(0, int(chapter_index)),
-            },
-            on_conflict="owner,book_id",
-        ).execute()
-        return True, None
-    except Exception as exc:
-        return False, str(exc)
+ถ้าอยากเล่นกับเพื่อน น้องแม็ทสามารถพูดว่า
 
+Can I play with you?
 
-def persist_bookmark(item):
-    client = get_supabase_client()
-    if client is None:
-        return False, "Supabase is not configured."
+ถ้าเพื่อนกำลังใช้ของเล่นอยู่ น้องแม็ทสามารถรอ หรือเลือกเล่นอย่างอื่นก่อน
 
-    try:
-        client.table("bunny_bookmarks").upsert(
-            {
-                "owner": storage_owner(),
-                "book_id": item["book_id"],
-                "chapter_id": item["chapter_id"],
-                "bookmark_data": item,
-            },
-            on_conflict="owner,book_id,chapter_id",
-        ).execute()
-        return True, None
-    except Exception as exc:
-        return False, str(exc)
+ถ้าเกิดทำผิดพลาด น้องแม็ทพูดว่า
 
+I’m sorry. I will try again.
 
-def delete_persistent_bookmark(book_id: str, chapter_id: str):
-    client = get_supabase_client()
-    if client is None:
-        return False, "Supabase is not configured."
+น้องแม็ทไม่จำเป็นต้องทำทุกอย่างให้สมบูรณ์แบบ
 
-    try:
-        (
-            client.table("bunny_bookmarks")
-            .delete()
-            .eq("owner", storage_owner())
-            .eq("book_id", book_id)
-            .eq("chapter_id", chapter_id)
-            .execute()
-        )
-        return True, None
-    except Exception as exc:
-        return False, str(exc)
+สิ่งสำคัญคือ ลองทำ เรียนรู้ และลองใหม่
+
+ทุกครั้งที่น้องแม็ททำอะไรด้วยตัวเองได้อีกหนึ่งอย่าง น้องแม็ทก็เก่งขึ้นอีกนิดหนึ่ง
+
+คุณแม่ภูมิใจเวลาน้องแม็ทพยายาม ไม่ใช่เฉพาะเวลาน้องแม็ททำสำเร็จ
+
+Tomorrow, let’s try again.
+
+Matthew can learn.
+
+Matthew can ask.
+
+Matthew can try.
+
+And Matthew can do more and more by himself.'''
+      }
+  ]
+ }
+]
 
 
 # =========================================================
@@ -3232,67 +3364,51 @@ def delete_persistent_bookmark(book_id: str, chapter_id: str):
 def initialize_state():
     defaults = {
         "page": "Home",
-        "books": DEMO_BOOKS.copy(),
+        "books": DEMO_BOOKS,
         "current_book_id": DEMO_BOOKS[0]["book_id"],
         "current_chapter_index": 0,
-        "last_read": {DEMO_BOOKS[0]["book_id"]: 0},
+        "last_read": {
+            DEMO_BOOKS[0]["book_id"]: 0,
+        },
         "bookmarks": [],
         "font_size": 19,
         "pending_import": None,
         "import_mode": "Paste / Type Text",
         "tts_nonce": 0,
         "reader_notice": "",
-        "storage_loaded": False,
-        "storage_error": "",
     }
     for key, value in defaults.items():
         if key not in st.session_state:
             st.session_state[key] = value
 
+    # Sync built-in books after code updates while preserving true user-imported books.
+    # Also remove obsolete built-in versions kept in Streamlit session state.
     builtin_ids = {book["book_id"] for book in DEMO_BOOKS}
-    legacy_builtin_ids = {"technical-product-manager-ai-llm-chinese"}
+    legacy_builtin_ids = {
+        "technical-product-manager-ai-llm-chinese",
+    }
 
-    # Load persistent user data once per browser session.
-    if not st.session_state.storage_loaded:
-        persistent, error = load_persistent_state()
-        st.session_state.storage_loaded = True
-        st.session_state.storage_error = error or ""
-
-        persisted_books = [
-            book for book in persistent.get("books", [])
-            if book.get("book_id") not in builtin_ids
-            and book.get("book_id") not in legacy_builtin_ids
-        ]
-        st.session_state.books = DEMO_BOOKS.copy() + persisted_books
-
-        persisted_progress = persistent.get("last_read", {})
-        if isinstance(persisted_progress, dict):
-            st.session_state.last_read.update(persisted_progress)
-
-        persisted_bookmarks = persistent.get("bookmarks", [])
-        if isinstance(persisted_bookmarks, list):
-            st.session_state.bookmarks = persisted_bookmarks
-
-    # Keep built-in books synced to the latest code while preserving user books.
     current_books = st.session_state.get("books", [])
     imported_books = [
         book for book in current_books
         if book.get("book_id") not in builtin_ids
         and book.get("book_id") not in legacy_builtin_ids
     ]
-    st.session_state.books = DEMO_BOOKS.copy() + imported_books
+    st.session_state.books = DEMO_BOOKS + imported_books
 
-    # Migrate an open legacy TPM book to the current built-in version.
+    # Migrate an open legacy TPM book to the new no-Chinese version.
     if st.session_state.get("current_book_id") in legacy_builtin_ids:
         st.session_state.current_book_id = "technical-product-manager-ai-llm"
         st.session_state.current_chapter_index = 0
 
+    # Migrate reading progress from the old TPM id if it exists.
     old_tpm_progress = st.session_state.last_read.pop(
         "technical-product-manager-ai-llm-chinese", None
     )
     if old_tpm_progress is not None:
         st.session_state.last_read["technical-product-manager-ai-llm"] = old_tpm_progress
 
+    # Remove bookmarks that point to the obsolete TPM book version.
     st.session_state.bookmarks = [
         bookmark
         for bookmark in st.session_state.get("bookmarks", [])
@@ -3301,7 +3417,6 @@ def initialize_state():
 
     for book in DEMO_BOOKS:
         st.session_state.last_read.setdefault(book["book_id"], 0)
-
 
 
 # =========================================================
@@ -3337,9 +3452,6 @@ def open_book(book_id: str, chapter_index=None):
     chapter_index = max(0, min(chapter_index, max(len(book["chapters"]) - 1, 0)))
     st.session_state.current_chapter_index = chapter_index
     st.session_state.last_read[book_id] = chapter_index
-    ok, error = persist_progress(book_id, chapter_index)
-    if not ok and storage_is_configured():
-        st.session_state.storage_error = error or "Could not save reading progress."
     st.session_state.page = "Reader"
 
 
@@ -3350,9 +3462,6 @@ def open_chapter(index: int):
     index = max(0, min(index, len(book["chapters"]) - 1))
     st.session_state.current_chapter_index = index
     st.session_state.last_read[book["book_id"]] = index
-    ok, error = persist_progress(book["book_id"], index)
-    if not ok and storage_is_configured():
-        st.session_state.storage_error = error or "Could not save reading progress."
 
 
 def is_bookmarked(book_id: str, chapter_id: str) -> bool:
@@ -3367,35 +3476,27 @@ def toggle_bookmark(book, chapter):
         x for x in st.session_state.bookmarks
         if x["book_id"] == book["book_id"] and x["chapter_id"] == chapter["chapter_id"]
     ]
-
     if existing:
-        ok, error = delete_persistent_bookmark(book["book_id"], chapter["chapter_id"])
-        if ok:
-            st.session_state.bookmarks = [
-                x for x in st.session_state.bookmarks
-                if not (
-                    x["book_id"] == book["book_id"]
-                    and x["chapter_id"] == chapter["chapter_id"]
-                )
-            ]
-            st.session_state.reader_notice = "Bookmark removed."
-        else:
-            st.session_state.reader_notice = f"Could not remove bookmark: {error}"
+        st.session_state.bookmarks = [
+            x for x in st.session_state.bookmarks
+            if not (
+                x["book_id"] == book["book_id"]
+                and x["chapter_id"] == chapter["chapter_id"]
+            )
+        ]
+        st.session_state.reader_notice = "Bookmark removed."
     else:
-        item = {
-            "book_id": book["book_id"],
-            "book_title": book["title"],
-            "chapter_id": chapter["chapter_id"],
-            "chapter_title": chapter["chapter_title"],
-            "chapter_index": st.session_state.current_chapter_index,
-            "saved_item": chapter["chapter_title"],
-        }
-        ok, error = persist_bookmark(item)
-        if ok:
-            st.session_state.bookmarks.append(item)
-            st.session_state.reader_notice = "Saved to Bookmarks."
-        else:
-            st.session_state.reader_notice = f"Could not save bookmark: {error}"
+        st.session_state.bookmarks.append(
+            {
+                "book_id": book["book_id"],
+                "book_title": book["title"],
+                "chapter_id": chapter["chapter_id"],
+                "chapter_title": chapter["chapter_title"],
+                "chapter_index": st.session_state.current_chapter_index,
+                "saved_item": chapter["chapter_title"],
+            }
+        )
+        st.session_state.reader_notice = "Saved to Bookmarks."
 
 
 def split_text_into_chapters(text: str, title: str):
@@ -3472,14 +3573,8 @@ def save_book(title, author, content_type, category, description, raw_text):
         "chapters": chapters,
     }
 
-    # Save to Supabase first so the UI never claims success for a session-only book.
-    ok, error = persist_book(book)
-    if not ok:
-        return False, f"Could not save permanently: {error}"
-
     st.session_state.books.append(book)
     st.session_state.last_read[book_id] = 0
-    persist_progress(book_id, 0)
     st.session_state.current_book_id = book_id
     st.session_state.current_chapter_index = 0
     st.session_state.pending_import = None
@@ -4430,21 +4525,6 @@ def render_library():
 # ADD CONTENT / IMPORT
 # =========================================================
 def render_add_content():
-    if not storage_is_configured():
-        st.markdown(
-            """
-            <div class="pastel-note pastel-warning">
-                Permanent saving is not configured yet. Add your Supabase secrets before saving new books.
-            </div>
-            """,
-            unsafe_allow_html=True,
-        )
-    elif st.session_state.get("storage_error"):
-        st.markdown(
-            f'<div class="pastel-note pastel-warning">Storage warning: {escape(st.session_state.storage_error)}</div>',
-            unsafe_allow_html=True,
-        )
-
     st.markdown("## Add Content")
     st.caption("Bring your favorite reads together in one cozy place.")
 

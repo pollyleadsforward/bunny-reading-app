@@ -3281,27 +3281,27 @@ DEMO_BOOKS = [{'book_id': 'product-development-interview-prep',
       {'chapter_id': 'matthew-bedtime',
        'chapter_title': 'น้องแม็ทเข้านอนให้ไว',
        'order': 1,
-       'content': '''ENGLISH
+       'content': '''
 
-Matthew, Teacher Gift said that Matthew should go to bed early. It’s time for us to take a shower and brush our teeth now.
+Matthew, Teacher Gift said that Matthew should go to bed early.   Its time for us to take a shower and brush our teeth now.
 
-It’s time to drink your milk and get ready for bed. Once it’s bedtime, we won’t play anymore.
+Its time to drink your milk and get ready for bed. Once its bedtime, we wont play anymore.
 
 Annalu also said that Matthew will be a good boy.
 
-Tonight, let’s finish everything quickly, okay? Take a nice shower, brush your teeth well, put on your pajamas, and get into bed.
+Tonight, lets finish everything quickly, okay? Take a nice shower, brush your teeth well, put on your pajamas, and get into bed.
 
 Before bedtime, we can choose one story, and Mommy will read it to Matthew.
 
-When the story is finished, we’ll turn off the light, close our eyes, and let our bodies rest and grow strong.
+When the story is finished, well turn off the light, close our eyes, and let our bodies rest and grow strong.
 
-If Matthew goes to bed early, tomorrow morning you’ll wake up feeling fresh. You’ll have lots of energy to go to school, play with your friends, and learn new things.
+If Matthew goes to bed early, tomorrow morning youll wake up feeling fresh. Youll have lots of energy to go to school, play with your friends, and learn new things.
 
 Teacher Gift will be happy that Matthew gets enough rest.
 
 Mommy will be happy too, because Matthew is learning how to take care of himself.
 
-Tonight, you don’t have to fall asleep right away. Just lie still, hug your pillow, breathe slowly, and relax.
+Tonight, you dont have to fall asleep right away. Just lie still, hug your pillow, breathe slowly, and relax.
 
 Good night, Matthew.
 

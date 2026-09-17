@@ -3155,69 +3155,69 @@ DEMO_BOOKS = [{'book_id': 'product-development-interview-prep',
   'chapters': [{'chapter_id': 'structural-thinking-for-reasoning-complexity-idea',
                 'chapter_title': 'Structural Thinking for Reasoning Complexity Idea',
                 'order': 1,
-                'content': 'นอยากให้คุณจำ “ประโยคแกน” พวกนี้ไว้ แล้ววนใช้ตลอดการสัมภาษณ์ได้เลย: \n'
+                'content': 'อยากให้คุณพอลลี่จำ “ประโยคแกน” พวกนี้ไว้ แล้ววนใช้ตลอดการสัมภาษณ์ได้เลย: \n'
                            ' \n'
-                           'เวลาจะเริ่มตอบ: “From my perspective…”, “The key point is…”, “What I '
+                           'เวลาคุณพอลลี่จะเริ่มตอบให้บอกว่า: “From my perspective…”, “The key point is…”, “What I '
                            'would focus on is…”, “The way I see it…” \n'
                            ' \n'
-                           'เวลาจะจัดคำตอบ: “There are two things I would consider.” / “I would '
+                           'เวลาคุณพอลลี่จะจัดคำตอบ: “There are two things I would consider.” / “I would '
                            'look at this from three perspectives.” / “First…, second…, and '
                            'finally…” \n'
                            ' \n'
-                           'เวลาอธิบายวิธีคิด: “The way I would approach this is…” / “I would '
+                           'เวลาคุณพอลลี่อธิบายวิธีคิด: “The way I would approach this is…” / “I would '
                            'start by understanding the problem first.” / “Before making a '
                            'decision, I would look at the customer, risk, and business impact.” \n'
                            ' \n'
-                           'เวลาจะบอกเหตุผล: “The reason is…” / “Because at the end of the day…” / '
+                           'เวลาคุณพอลลี่จะบอกเหตุผล: “The reason is…” / “Because at the end of the day…” / '
                            '“What matters here is…” \n'
                            ' \n'
-                           'เวลายกตัวอย่าง: “For example…” / “One example from my current role '
+                           'เวลาคุณพอลลี่ยกตัวอย่าง: “For example…” / “One example from my current role '
                            'is…” / “I had a similar situation before.” \n'
                            ' \n'
-                           'เวลาเล่าบทบาทตัวเองแบบ Senior: “My role was to bring everyone to the '
+                           'เวลาคุณพอลลี่เล่าบทบาทตัวเองแบบ Senior: “My role was to bring everyone to the '
                            'same understanding.” / “I helped the team clarify the problem and '
                            'agree on the next step.” / “I drove the discussion toward a decision.” '
                            '/ “I didn’t do everything myself. I made sure the right people could '
                            'move forward.” \n'
                            ' \n'
-                           'เวลาอยากเน้น: “For me, this is very important.” / “This is actually '
+                           'เวลาคุณพอลลี่อยากเน้น: “For me, this is very important.” / “This is actually '
                            'one of the key points.” / “That’s where I think I can add value.” \n'
                            ' \n'
-                           'เวลาไม่เข้าใจคำถาม: “Could you please repeat the question?” / “If I '
+                           'เวลาคุณพอลลี่ไม่เข้าใจคำถาม: “Could you please repeat the question?” / “If I '
                            'understand your question correctly, you’re asking about… right?” / “Do '
                            'you mean from a product perspective or a people-management '
                            'perspective?” \n'
                            ' \n'
-                           'เวลาต้องการคิด: “That’s a good question. Let me think for a moment.” / '
+                           'เวลาคุณพอลลี่ต้องการคิด: “That’s a good question. Let me think for a moment.” / '
                            '“Let me structure my thoughts.” / “I would probably look at it this '
                            'way.” \n'
                            ' \n'
-                           'เวลายังไม่มีประสบการณ์ตรง: “I haven’t handled that specific case '
+                           'เวลาคุณพอลลี่ยังไม่มีประสบการณ์ตรง: “I haven’t handled that specific case '
                            'directly, but I would approach it by…” / “That’s not something I’ve '
                            'worked on directly, but the principle is quite similar to…” \n'
                            ' \n'
-                           'เวลาจะสรุป: “So overall…” / “So my main point is…” / “That would be my '
+                           'เวลาคุณพอลลี่จะสรุป: “So overall…” / “So my main point is…” / “That would be my '
                            'approach.” / “That’s how I would handle it.” \n'
                            ' \n'
-                           'เวลาพูดเรื่อง leadership: “I try to give the team clarity, not just '
+                           'เวลาคุณพอลลี่พูดเรื่อง leadership: “I try to give the team clarity, not just '
                            'tasks.” / “My role as a leader is to remove blockers and help the team '
                            'make better decisions.” / “I give direction, but I also give people '
                            'room to think.” \n'
                            ' \n'
-                           'เวลาเจอ disagreement: “I try to understand the concern first.” / “I '
+                           'เวลาคุณพอลลี่เจอ disagreement: “I try to understand the concern first.” / “I '
                            'would bring the discussion back to the objective.” / “We may have '
                            'different views, but we need to agree on the decision criteria.” \n'
                            ' \n'
-                           'เวลาไม่รู้ตัวเลขเป๊ะ: “I don’t have the exact number with me, but…” / '
+                           'เวลาคุณพอลลี่ไม่รู้ตัวเลขเป๊ะ: “I don’t have the exact number with me, but…” / '
                            '“I don’t want to give you an inaccurate number, but the overall trend '
                            'was…” \n'
                            ' \n'
-                           'เวลาจะปิดคำตอบอย่างมั่นใจ: “And that’s where I believe my experience '
+                           'เวลาคุณพอลลี่จะปิดคำตอบอย่างมั่นใจ: “And that’s where I believe my experience '
                            'can contribute.” / “That experience taught me how to manage complexity '
                            'across different teams.” \n'
                            ' \n'
                            ' \n'
-                           'มีอีกอย่างที่ฉันอยากให้คุณจำมากกว่า grammar คือ โครง 4 ประโยค นี้ '
+                           'มีอีกอย่างที่ฉันอยากให้คุณพอลลี่จำมากกว่า grammar คือ โครง 4 ประโยค นี้ '
                            'เพราะใช้ตอบได้แทบทุกคำถาม: \n'
                            ' \n'
                            '1. Conclusion: “The key point is…” \n'
@@ -3227,7 +3227,7 @@ DEMO_BOOKS = [{'book_id': 'product-development-interview-prep',
                            ' \n'
                            'เช่น ถ้าถามว่า How do you manage stakeholders? \n'
                            ' \n'
-                           'คุณไม่ต้องพยายามพูดภาษาอังกฤษสวย ๆ เลย: \n'
+                           'คุณพอลลี่ไม่ต้องพยายามพูดภาษาอังกฤษสวย ๆ เลย: \n'
                            ' \n'
                            '> “The key point for me is alignment. I make sure everyone understands '
                            'the same problem and the same goal. For example, when I work with '
@@ -3237,7 +3237,7 @@ DEMO_BOOKS = [{'book_id': 'product-development-interview-prep',
                            ' \n'
                            ' \n'
                            ' \n'
-                           'ภาษาแบบนี้ ธรรมดามาก แต่ความคิดชัดมากค่ะ'}]},
+                           'ภาษาแบบนี้ ธรรมดามาก แต่ความคิดชัดมากค่ะ สู้ๆนะคะคุณพอลลี่'}]},
  {'book_id': 'tell-me-about-yourself',
   'title': 'Tell Me About Yourself',
   'subtitle': 'Personal Development Series I',
@@ -3249,7 +3249,7 @@ DEMO_BOOKS = [{'book_id': 'product-development-interview-prep',
   'chapters': [{'chapter_id': 'tell-me-about-yourself-personal',
                 'chapter_title': 'Tell Me About Yourself',
                 'order': 1,
-                'content': '’m currently working at Siam Commercial Bank in Digital Lending.\n'
+                'content': 'I’m currently working at Siam Commercial Bank in Digital Lending.\n'
                            '\n'
                            'My background started from customer-facing and lending sales, so I '
                            'understand customer behavior and frontline challenges quite well. I '
@@ -3281,7 +3281,37 @@ DEMO_BOOKS = [{'book_id': 'product-development-interview-prep',
       {'chapter_id': 'matthew-bedtime',
        'chapter_title': 'น้องแม็ทเข้านอนให้ไว',
        'order': 1,
-       'content': '''น้องแม็ทคะ คุณครูกิ๊ฟบอกว่า ให้น้องแม็ทนอนให้ไว เราต้องไปอาบน้ำแปรงฟันแล้วนะคะ
+       'content': '''ENGLISH
+
+Matthew, Teacher Gift said that Matthew should go to bed early. It’s time for us to take a shower and brush our teeth now.
+
+It’s time to drink your milk and get ready for bed. Once it’s bedtime, we won’t play anymore.
+
+Annalu also said that Matthew will be a good boy.
+
+Tonight, let’s finish everything quickly, okay? Take a nice shower, brush your teeth well, put on your pajamas, and get into bed.
+
+Before bedtime, we can choose one story, and Mommy will read it to Matthew.
+
+When the story is finished, we’ll turn off the light, close our eyes, and let our bodies rest and grow strong.
+
+If Matthew goes to bed early, tomorrow morning you’ll wake up feeling fresh. You’ll have lots of energy to go to school, play with your friends, and learn new things.
+
+Teacher Gift will be happy that Matthew gets enough rest.
+
+Mommy will be happy too, because Matthew is learning how to take care of himself.
+
+Tonight, you don’t have to fall asleep right away. Just lie still, hug your pillow, breathe slowly, and relax.
+
+Good night, Matthew.
+
+You did a good job today.
+
+Tomorrow is another happy day.
+
+ภาษาไทย
+
+น้องแม็ทคะ คุณครูกิ๊ฟบอกว่า ให้น้องแม็ทนอนให้ไว เราต้องไปอาบน้ำแปรงฟันแล้วนะคะ
 
 ถึงเวลากินนมนอนให้นอนเราจะไม่เล่นแล้วนะคะ
 

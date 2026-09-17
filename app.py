@@ -3386,6 +3386,18 @@ And Matthew can do more and more by himself.'''
       }
   ]
  }
+,  {'book_id': 'polly-you-are-gorgeous',
+   'title': 'Polly You Are Gorgeous',
+   'subtitle': 'Personal Development',
+   'author': 'Polly Chen',
+   'content_type': 'Book',
+   'category': 'Personal Development',
+   'description': '',
+   'cover_emoji': '📖',
+   'chapters': [{'chapter_id': 'polly-you-are-gorgeous',
+                 'chapter_title': 'Polly You Are Gorgeous',
+                 'order': 1,
+                 'content': 'Good morning, Polly. You are gorgeous.\n\nHere is your affirmation for today.\n\nYou are ready for this opportunity.\n\nYou are smart, calm, and capable.\n\nYou do not need to be the loudest person in the room to be a strong leader.\n\nYou listen carefully.\nYou understand people.\nYou read the situation.\nYou see the bigger picture.\n\nYou know how to take a complex problem and make it clear.\n\nYou know how to set direction.\n\nYou know how to make decisions.\n\nYou know how to turn strategy into execution.\n\nYou give people clarity.\nYou give them ownership.\nYou remove blockers.\nYou help people do their best work.\n\nPeople can trust you because you are calm, fair, thoughtful, and clear.\n\nYou can lead even without authority.\n\nYou bring the right people together.\nYou create alignment.\nYou move the work forward.\n\nYou do not need to know everything.\n\nA smart leader knows how to learn, how to ask the right questions, and how to find the right answer.\n\nYou understand customers.\nYou understand lending.\nYou understand business, risk, operations, systems, and regulations.\n\nYou can connect all of them and make better product decisions.\n\nTomorrow, you do not need to impress anyone by talking fast.\n\nSpeak slowly.\n\nThink clearly.\n\nStart with the conclusion.\n\nExplain your reasons.\n\nMake your recommendation.\n\nShow them how you think.\n\nShow them how you lead.\n\nYou are not just an executor.\n\nYou are a leader who can set direction and drive decisions.\n\nYou are ready for a bigger role.\n\nYou are ready to lead a product.\n\nYou are ready to lead a team.\n\nYou are ready to create impact.\n\nRemember:\n\n**Customer. Strategy. Risk. Execution. Leadership.**\n**Customer. Strategy. Risk. Execution. Leadership.**\nAnd remember who you are:\n\n**Calm. Smart. Strategic. Clear. Human.**\n**Calm. Smart. Strategic. Clear. Human.**\nYou are calm, smart, strategic, clear, human\nYou are ready, Polly.\n\nGo in there and show them how you think and how you lead.'}]}
 ]
 
 

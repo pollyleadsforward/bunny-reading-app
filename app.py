@@ -3061,7 +3061,302 @@ DEMO_BOOKS = [{'book_id': 'product-development-interview-prep',
                            '\n'
                            '                                      END OF BOOTCAMP\n'
                            '         เป้าหมายต่อไป: ลงมือทำ Portfolio 1-2 projects และสะสม '
-                           'technical delivery experience จริง'}]}]
+                           'technical delivery experience จริง'}]},
+ {'book_id': 'problem-solving-series-i',
+  'title': 'Problem Solving Series I',
+  'subtitle': 'Personal Development',
+  'author': 'Polly Chen',
+  'content_type': 'Book',
+  'category': 'Personal Development',
+  'description': '',
+  'cover_emoji': '📖',
+  'chapters': [{'chapter_id': 'problem-solving-series-i',
+                'chapter_title': 'Problem Solving Series I',
+                'order': 1,
+                'content': '1. **How do you define a good product strategy?** \n'
+                           '   **Core answer:** “A good product strategy should balance customer '
+                           'needs, business growth, risk, and execution feasibility.” \n'
+                           '   **Example:** “For lending, I would also look at whether the product '
+                           'creates customer value while maintaining sustainable risk-adjusted '
+                           'profitability.” \n'
+                           '   🔐 **Key:** Customer → Business → Risk → Execution \n'
+                           ' \n'
+                           '2. **How do you prioritize when everything is urgent?** \n'
+                           '   **Core answer:** “I prioritize based on customer impact, business '
+                           'impact, risk, and urgency, then align stakeholders on what must be '
+                           'done first.” \n'
+                           '   **Example:** “When several issues happen at the same time, I '
+                           'separate immediate customer impact from issues that can wait for a '
+                           'longer-term fix.” \n'
+                           '   🔐 **Key:** Customer → Business → Risk → Urgency \n'
+                           ' \n'
+                           '3. **Tell me about a difficult problem you solved.** \n'
+                           '   **Core answer:** “I clarify the real problem, identify the root '
+                           'cause, align the right teams, solve the immediate issue, and then '
+                           'define preventive actions.” \n'
+                           '   **Example:** “For incidents, I don’t stop after fixing the customer '
+                           'impact. I also make sure we understand why it happened and how to '
+                           'prevent recurrence.” \n'
+                           '   🔐 **Key:** Problem → Root cause → Align → Fix → Prevent \n'
+                           ' \n'
+                           '4. **How do you handle disagreement with stakeholders?** \n'
+                           '   **Core answer:** “I bring the discussion back to the objective and '
+                           'decision criteria, and focus on facts, impact, and trade-offs rather '
+                           'than personal opinions.” \n'
+                           '   **Example:** “If teams have different views, I clarify what we are '
+                           'trying to achieve and what risks or customer impacts come with each '
+                           'option.” \n'
+                           '   🔐 **Key:** Objective → Facts → Impact → Trade-off \n'
+                           ' \n'
+                           '5. **How would you manage your team?** \n'
+                           '   **Core answer:** “I give clear direction and expected outcomes, but '
+                           'I give the team space to think and execute.” \n'
+                           '   **Example:** “My role is to coach, remove blockers, challenge their '
+                           'thinking when needed, and help close gaps rather than doing everything '
+                           'myself.” \n'
+                           '   🔐 **Key:** Direction → Empower → Coach → Unblock \n'
+                           ' \n'
+                           '6. **What is your biggest strength?** \n'
+                           '   **Core answer:** “My strength is managing complex lending products '
+                           'end-to-end, bringing different stakeholders together, and turning '
+                           'unclear problems into clear decisions and actions.” \n'
+                           '   **Example:** “A lot of my work involves situations where ownership '
+                           'or the root cause is unclear, so I help structure the problem and move '
+                           'everyone toward a decision.” \n'
+                           '   🔐 **Key:** Complex → Align → Clear decision \n'
+                           ' \n'
+                           '7. **What is one area you want to improve?** \n'
+                           '   **Core answer:** “One area I’m still developing is how to apply AI '
+                           'more effectively in my day-to-day work.” \n'
+                           '   **Example:** “I’ve been learning and experimenting with AI, but I '
+                           'believe there is still more I can do to integrate it into product '
+                           'management, analysis, and productivity.” \n'
+                           '   🔐 **Key:** Learn AI → Experiment → Apply → Productivity \n'
+                           ' \n'
+                           '8. **Why should we hire you?** \n'
+                           '   **Core answer:** “I can help the team turn strategy into execution, '
+                           'while also creating an environment where people can work effectively '
+                           'and happily.” \n'
+                           '   **Example:** “I’m not the most talkative person, but I understand '
+                           'people quite well. I can read the situation, understand what people '
+                           'need, and help stabilize the team when things become difficult. I '
+                           'believe I bring both execution capability and a human touch to '
+                           'leadership.” \n'
+                           '   🔐 **Key:** Strategy → Execution → Happy Team → Stabilize → Human '
+                           'Touch'}]},
+ {'book_id': 'structural-thinking-for-reasoning-complexity-idea',
+  'title': 'Structural Thinking for Reasoning Complexity Idea',
+  'subtitle': 'Personal Development Series I',
+  'author': 'Polly Chen',
+  'content_type': 'Book',
+  'category': 'Personal Development Series I',
+  'description': '',
+  'cover_emoji': '📖',
+  'chapters': [{'chapter_id': 'structural-thinking-for-reasoning-complexity-idea',
+                'chapter_title': 'Structural Thinking for Reasoning Complexity Idea',
+                'order': 1,
+                'content': 'นอยากให้คุณจำ “ประโยคแกน” พวกนี้ไว้ แล้ววนใช้ตลอดการสัมภาษณ์ได้เลย: \n'
+                           ' \n'
+                           'เวลาจะเริ่มตอบ: “From my perspective…”, “The key point is…”, “What I '
+                           'would focus on is…”, “The way I see it…” \n'
+                           ' \n'
+                           'เวลาจะจัดคำตอบ: “There are two things I would consider.” / “I would '
+                           'look at this from three perspectives.” / “First…, second…, and '
+                           'finally…” \n'
+                           ' \n'
+                           'เวลาอธิบายวิธีคิด: “The way I would approach this is…” / “I would '
+                           'start by understanding the problem first.” / “Before making a '
+                           'decision, I would look at the customer, risk, and business impact.” \n'
+                           ' \n'
+                           'เวลาจะบอกเหตุผล: “The reason is…” / “Because at the end of the day…” / '
+                           '“What matters here is…” \n'
+                           ' \n'
+                           'เวลายกตัวอย่าง: “For example…” / “One example from my current role '
+                           'is…” / “I had a similar situation before.” \n'
+                           ' \n'
+                           'เวลาเล่าบทบาทตัวเองแบบ Senior: “My role was to bring everyone to the '
+                           'same understanding.” / “I helped the team clarify the problem and '
+                           'agree on the next step.” / “I drove the discussion toward a decision.” '
+                           '/ “I didn’t do everything myself. I made sure the right people could '
+                           'move forward.” \n'
+                           ' \n'
+                           'เวลาอยากเน้น: “For me, this is very important.” / “This is actually '
+                           'one of the key points.” / “That’s where I think I can add value.” \n'
+                           ' \n'
+                           'เวลาไม่เข้าใจคำถาม: “Could you please repeat the question?” / “If I '
+                           'understand your question correctly, you’re asking about… right?” / “Do '
+                           'you mean from a product perspective or a people-management '
+                           'perspective?” \n'
+                           ' \n'
+                           'เวลาต้องการคิด: “That’s a good question. Let me think for a moment.” / '
+                           '“Let me structure my thoughts.” / “I would probably look at it this '
+                           'way.” \n'
+                           ' \n'
+                           'เวลายังไม่มีประสบการณ์ตรง: “I haven’t handled that specific case '
+                           'directly, but I would approach it by…” / “That’s not something I’ve '
+                           'worked on directly, but the principle is quite similar to…” \n'
+                           ' \n'
+                           'เวลาจะสรุป: “So overall…” / “So my main point is…” / “That would be my '
+                           'approach.” / “That’s how I would handle it.” \n'
+                           ' \n'
+                           'เวลาพูดเรื่อง leadership: “I try to give the team clarity, not just '
+                           'tasks.” / “My role as a leader is to remove blockers and help the team '
+                           'make better decisions.” / “I give direction, but I also give people '
+                           'room to think.” \n'
+                           ' \n'
+                           'เวลาเจอ disagreement: “I try to understand the concern first.” / “I '
+                           'would bring the discussion back to the objective.” / “We may have '
+                           'different views, but we need to agree on the decision criteria.” \n'
+                           ' \n'
+                           'เวลาไม่รู้ตัวเลขเป๊ะ: “I don’t have the exact number with me, but…” / '
+                           '“I don’t want to give you an inaccurate number, but the overall trend '
+                           'was…” \n'
+                           ' \n'
+                           'เวลาจะปิดคำตอบอย่างมั่นใจ: “And that’s where I believe my experience '
+                           'can contribute.” / “That experience taught me how to manage complexity '
+                           'across different teams.” \n'
+                           ' \n'
+                           ' \n'
+                           'มีอีกอย่างที่ฉันอยากให้คุณจำมากกว่า grammar คือ โครง 4 ประโยค นี้ '
+                           'เพราะใช้ตอบได้แทบทุกคำถาม: \n'
+                           ' \n'
+                           '1. Conclusion: “The key point is…” \n'
+                           '2. Reason: “The reason is…” \n'
+                           '3. Example: “For example, in my current role…” \n'
+                           '4. Result: “So the outcome was…” \n'
+                           ' \n'
+                           'เช่น ถ้าถามว่า How do you manage stakeholders? \n'
+                           ' \n'
+                           'คุณไม่ต้องพยายามพูดภาษาอังกฤษสวย ๆ เลย: \n'
+                           ' \n'
+                           '> “The key point for me is alignment. I make sure everyone understands '
+                           'the same problem and the same goal. For example, when I work with '
+                           'business, IT and operations, I bring them together to clarify the '
+                           'issue and agree on the next step. So even though I don’t have '
+                           'authority over them, we can still move the work forward.” \n'
+                           ' \n'
+                           ' \n'
+                           ' \n'
+                           'ภาษาแบบนี้ ธรรมดามาก แต่ความคิดชัดมากค่ะ'}]},
+ {'book_id': 'tell-me-about-yourself',
+  'title': 'Tell Me About Yourself',
+  'subtitle': 'Personal Development Series I',
+  'author': 'Polly Chen',
+  'content_type': 'Book',
+  'category': 'Personal Development Series I',
+  'description': '',
+  'cover_emoji': '📖',
+  'chapters': [{'chapter_id': 'tell-me-about-yourself-personal',
+                'chapter_title': 'Tell Me About Yourself',
+                'order': 1,
+                'content': '’m currently working at Siam Commercial Bank in Digital Lending.\n'
+                           '\n'
+                           'My background started from customer-facing and lending sales, so I '
+                           'understand customer behavior and frontline challenges quite well. I '
+                           'also had one year of people management experience, leading a mobility '
+                           'team of around 10 people in lending sales.\n'
+                           '\n'
+                           'I later moved into Product Management, where I now manage digital '
+                           'lending end-to-end across product, process, operations, regulatory '
+                           'requirements, incidents, and system migration.\n'
+                           '\n'
+                           'A big part of my role is leading cross-functional initiatives without '
+                           'direct authority. I clarify the problem, set the direction, bring the '
+                           'right stakeholders together, and drive decisions so the work can move '
+                           'forward.\n'
+                           '\n'
+                           'Overall, I would say my key strength is managing complex lending '
+                           'products end-to-end, aligning different stakeholders, and turning '
+                           'unclear problems into clear decisions and actions.  🔐 Sales → People '
+                           'Leadership → Product → End-to-End → Set Direction → Drive Decision'}]},
+ {'book_id': 'talk-with-matthew',
+  'title': 'คุยกับน้องแม็ท',
+  'subtitle': 'Bedtime & Growing Up Stories',
+  'author': 'Polly Chen',
+  'content_type': 'Book',
+  'category': 'Family',
+  'description': 'เรื่องสั้นสำหรับคุยกับน้องแม็ทก่อนนอนและช่วยฝึกการดูแลตัวเอง',
+  'cover_emoji': '🐰',
+  'chapters': [
+      {'chapter_id': 'matthew-bedtime',
+       'chapter_title': 'น้องแม็ทเข้านอนให้ไว',
+       'order': 1,
+       'content': '''น้องแม็ทคะ คุณครูกิ๊ฟบอกว่า ให้น้องแม็ทนอนให้ไว เราต้องไปอาบน้ำแปรงฟันแล้วนะคะ
+
+ถึงเวลากินนมนอนให้นอนเราจะไม่เล่นแล้วนะคะ
+
+Annalu also saids Matthew will be a good boy.
+
+คืนนี้น้องแม็ททำทุกอย่างให้เสร็จเร็ว ๆ นะคะ อาบน้ำให้สะอาด แปรงฟันให้สะอาด ใส่ชุดนอน แล้วขึ้นเตียง
+
+ก่อนนอนเราสามารถเลือกนิทานหนึ่งเรื่อง แล้วคุณแม่จะอ่านให้น้องแม็ทฟัง
+
+พออ่านนิทานจบ เราจะปิดไฟ หลับตา และพักผ่อนให้ร่างกายแข็งแรง
+
+ถ้าน้องแม็ทนอนเร็ว พรุ่งนี้ตอนเช้าน้องแม็ทจะตื่นมาสดชื่น มีแรงไปโรงเรียน มีแรงเล่นกับเพื่อน และมีแรงเรียนรู้สิ่งใหม่ ๆ
+
+คุณครูกิ๊ฟจะดีใจที่น้องแม็ทพักผ่อนเพียงพอ
+
+คุณแม่ก็จะดีใจเหมือนกัน เพราะน้องแม็ทกำลังเรียนรู้ที่จะดูแลตัวเอง
+
+คืนนี้เราไม่ต้องรีบนอนให้หลับทันทีนะคะ แค่นอนนิ่ง ๆ กอดหมอน หายใจช้า ๆ แล้วพักผ่อน
+
+Good night, Matthew.
+
+You did a good job today.
+
+Tomorrow is another happy day.'''
+      },
+      {'chapter_id': 'matthew-can-do-it',
+       'chapter_title': 'น้องแม็ททำเองได้',
+       'order': 2,
+       'content': '''น้องแม็ทโตขึ้นทุกวันแล้วนะคะ และมีหลายอย่างที่น้องแม็ทสามารถทำเองได้
+
+ตอนเช้า เมื่อตื่นขึ้นมา น้องแม็ทลุกจากเตียง เก็บหมอน แล้วเดินไปล้างหน้า
+
+จากนั้นน้องแม็ทแปรงฟันและเตรียมตัวไปโรงเรียน
+
+ถ้ามีบางอย่างที่ยังทำไม่ได้ น้องแม็ทสามารถพูดว่า
+
+Mommy, can you help me please?
+
+การขอความช่วยเหลือไม่ใช่เรื่องน่าอายนะคะ เด็กเก่งไม่จำเป็นต้องทำทุกอย่างได้ตั้งแต่ครั้งแรก
+
+เด็กเก่งคือเด็กที่ลองทำก่อน ถ้าทำไม่ได้ก็ถาม แล้วเรียนรู้ว่าจะทำอย่างไรในครั้งต่อไป
+
+ที่โรงเรียน ถ้าน้องแม็ทไม่เข้าใจอะไร น้องแม็ทสามารถถามคุณครูได้
+
+ถ้าอยากเล่นกับเพื่อน น้องแม็ทสามารถพูดว่า
+
+Can I play with you?
+
+ถ้าเพื่อนกำลังใช้ของเล่นอยู่ น้องแม็ทสามารถรอ หรือเลือกเล่นอย่างอื่นก่อน
+
+ถ้าเกิดทำผิดพลาด น้องแม็ทพูดว่า
+
+I’m sorry. I will try again.
+
+น้องแม็ทไม่จำเป็นต้องทำทุกอย่างให้สมบูรณ์แบบ
+
+สิ่งสำคัญคือ ลองทำ เรียนรู้ และลองใหม่
+
+ทุกครั้งที่น้องแม็ททำอะไรด้วยตัวเองได้อีกหนึ่งอย่าง น้องแม็ทก็เก่งขึ้นอีกนิดหนึ่ง
+
+คุณแม่ภูมิใจเวลาน้องแม็ทพยายาม ไม่ใช่เฉพาะเวลาน้องแม็ททำสำเร็จ
+
+Tomorrow, let’s try again.
+
+Matthew can learn.
+
+Matthew can ask.
+
+Matthew can try.
+
+And Matthew can do more and more by himself.'''
+      }
+  ]
+ }
+]
 
 
 # =========================================================

@@ -3177,27 +3177,27 @@ DEMO_BOOKS = [{'book_id': 'product-development-interview-prep',
                            'เวลาคุณพอลลี่เล่าบทบาทตัวเองแบบ Senior: “My role was to bring everyone to the '
                            'same understanding.” / “I helped the team clarify the problem and '
                            'agree on the next step.” / “I drove the discussion toward a decision.” '
-                           '/ “I didn’t do everything myself. I made sure the right people could '
+                           '/ “I didnt do everything myself. I made sure the right people could '
                            'move forward.” \n'
                            ' \n'
                            'เวลาคุณพอลลี่อยากเน้น: “For me, this is very important.” / “This is actually '
-                           'one of the key points.” / “That’s where I think I can add value.” \n'
+                           'one of the key points.” / “Thats where I think I can add value.” \n'
                            ' \n'
                            'เวลาคุณพอลลี่ไม่เข้าใจคำถาม: “Could you please repeat the question?” / “If I '
-                           'understand your question correctly, you’re asking about… right?” / “Do '
+                           'understand your question correctly, youre asking about… right?” / “Do '
                            'you mean from a product perspective or a people-management '
                            'perspective?” \n'
                            ' \n'
-                           'เวลาคุณพอลลี่ต้องการคิด: “That’s a good question. Let me think for a moment.” / '
+                           'เวลาคุณพอลลี่ต้องการคิด: “Thats a good question. Let me think for a moment.” / '
                            '“Let me structure my thoughts.” / “I would probably look at it this '
                            'way.” \n'
                            ' \n'
-                           'เวลาคุณพอลลี่ยังไม่มีประสบการณ์ตรง: “I haven’t handled that specific case '
-                           'directly, but I would approach it by…” / “That’s not something I’ve '
+                           'เวลาคุณพอลลี่ยังไม่มีประสบการณ์ตรง: “I havent handled that specific case '
+                           'directly, but I would approach it by…” / “Thats not something Ive '
                            'worked on directly, but the principle is quite similar to…” \n'
                            ' \n'
                            'เวลาคุณพอลลี่จะสรุป: “So overall…” / “So my main point is…” / “That would be my '
-                           'approach.” / “That’s how I would handle it.” \n'
+                           'approach.” / “Thats how I would handle it.” \n'
                            ' \n'
                            'เวลาคุณพอลลี่พูดเรื่อง leadership: “I try to give the team clarity, not just '
                            'tasks.” / “My role as a leader is to remove blockers and help the team '
@@ -3208,11 +3208,11 @@ DEMO_BOOKS = [{'book_id': 'product-development-interview-prep',
                            'would bring the discussion back to the objective.” / “We may have '
                            'different views, but we need to agree on the decision criteria.” \n'
                            ' \n'
-                           'เวลาคุณพอลลี่ไม่รู้ตัวเลขเป๊ะ: “I don’t have the exact number with me, but…” / '
-                           '“I don’t want to give you an inaccurate number, but the overall trend '
+                           'เวลาคุณพอลลี่ไม่รู้ตัวเลขเป๊ะ: “I dont have the exact number with me, but…” / '
+                           '“I dont want to give you an inaccurate number, but the overall trend '
                            'was…” \n'
                            ' \n'
-                           'เวลาคุณพอลลี่จะปิดคำตอบอย่างมั่นใจ: “And that’s where I believe my experience '
+                           'เวลาคุณพอลลี่จะปิดคำตอบอย่างมั่นใจ: “And thats where I believe my experience '
                            'can contribute.” / “That experience taught me how to manage complexity '
                            'across different teams.” \n'
                            ' \n'
@@ -3232,7 +3232,7 @@ DEMO_BOOKS = [{'book_id': 'product-development-interview-prep',
                            '> “The key point for me is alignment. I make sure everyone understands '
                            'the same problem and the same goal. For example, when I work with '
                            'business, IT and operations, I bring them together to clarify the '
-                           'issue and agree on the next step. So even though I don’t have '
+                           'issue and agree on the next step. So even though I dont have '
                            'authority over them, we can still move the work forward.” \n'
                            ' \n'
                            ' \n'
@@ -3249,7 +3249,7 @@ DEMO_BOOKS = [{'book_id': 'product-development-interview-prep',
   'chapters': [{'chapter_id': 'tell-me-about-yourself-personal',
                 'chapter_title': 'Tell Me About Yourself',
                 'order': 1,
-                'content': 'I’m currently working at Siam Commercial Bank in Digital Lending.\n'
+                'content': 'Im currently working at Siam Commercial Bank in Digital Lending.\n'
                            '\n'
                            'My background started from customer-facing and lending sales, so I '
                            'understand customer behavior and frontline challenges quite well. I '
@@ -3309,7 +3309,7 @@ You did a good job today.
 
 Tomorrow is another happy day.
 
-ภาษาไทย
+
 
 น้องแม็ทคะ คุณครูกิ๊ฟบอกว่า ให้น้องแม็ทนอนให้ไว เราต้องไปอาบน้ำแปรงฟันแล้วนะคะ
 
@@ -3364,7 +3364,7 @@ Can I play with you?
 
 ถ้าเกิดทำผิดพลาด น้องแม็ทพูดว่า
 
-I’m sorry. I will try again.
+Im sorry. I will try again.
 
 น้องแม็ทไม่จำเป็นต้องทำทุกอย่างให้สมบูรณ์แบบ
 
@@ -3374,7 +3374,7 @@ I’m sorry. I will try again.
 
 คุณแม่ภูมิใจเวลาน้องแม็ทพยายาม ไม่ใช่เฉพาะเวลาน้องแม็ททำสำเร็จ
 
-Tomorrow, let’s try again.
+Tomorrow, lets try again.
 
 Matthew can learn.
 

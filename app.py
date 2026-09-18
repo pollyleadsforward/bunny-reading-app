@@ -10887,6 +10887,92 @@ def inject_css():
             color: var(--taupe) !important;
         }}
 
+        /*
+           Streamlit Cloud can render keyed containers with a slightly different
+           DOM/class structure from local Streamlit. This fallback intentionally
+           targets the app's only radio control directly so the chapter navigator
+           keeps the same pastel pill layout in both environments.
+        */
+        [data-testid="stRadio"] {{
+            width: 100% !important;
+            min-width: 0 !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            overflow: hidden !important;
+        }}
+
+        [data-testid="stRadio"] [role="radiogroup"] {{
+            display: flex !important;
+            flex-direction: row !important;
+            flex-wrap: nowrap !important;
+            align-items: center !important;
+            gap: 6px !important;
+            width: 100% !important;
+            min-width: 0 !important;
+            overflow-x: auto !important;
+            overflow-y: hidden !important;
+            padding: 1px 1px 5px !important;
+            scrollbar-width: none !important;
+            -webkit-overflow-scrolling: touch !important;
+            scroll-snap-type: x proximity;
+        }}
+
+        [data-testid="stRadio"] [role="radiogroup"]::-webkit-scrollbar {{
+            display: none !important;
+        }}
+
+        [data-testid="stRadio"] [role="radiogroup"] > label,
+        [data-testid="stRadio"] label[data-baseweb="radio"] {{
+            flex: 0 0 auto !important;
+            width: auto !important;
+            min-width: max-content !important;
+            max-width: none !important;
+            min-height: 31px !important;
+            margin: 0 !important;
+            padding: 5px 10px !important;
+            border-radius: 999px !important;
+            border: 1px solid #E6D8D1 !important;
+            background: #FAEEF2 !important;
+            color: var(--taupe) !important;
+            cursor: pointer !important;
+            white-space: nowrap !important;
+            scroll-snap-align: start;
+            box-sizing: border-box !important;
+        }}
+
+        [data-testid="stRadio"] [role="radiogroup"] > label:nth-child(6n+2),
+        [data-testid="stRadio"] label[data-baseweb="radio"]:nth-child(6n+2) {{ background: #EEF4EA !important; }}
+        [data-testid="stRadio"] [role="radiogroup"] > label:nth-child(6n+3),
+        [data-testid="stRadio"] label[data-baseweb="radio"]:nth-child(6n+3) {{ background: #F6ECE3 !important; }}
+        [data-testid="stRadio"] [role="radiogroup"] > label:nth-child(6n+4),
+        [data-testid="stRadio"] label[data-baseweb="radio"]:nth-child(6n+4) {{ background: #F0ECFA !important; }}
+        [data-testid="stRadio"] [role="radiogroup"] > label:nth-child(6n+5),
+        [data-testid="stRadio"] label[data-baseweb="radio"]:nth-child(6n+5) {{ background: #EAF3F8 !important; }}
+        [data-testid="stRadio"] [role="radiogroup"] > label:nth-child(6n+6),
+        [data-testid="stRadio"] label[data-baseweb="radio"]:nth-child(6n+6) {{ background: #FBF3DF !important; }}
+
+        [data-testid="stRadio"] [role="radiogroup"] > label:has(input:checked),
+        [data-testid="stRadio"] label[data-baseweb="radio"]:has(input:checked),
+        [data-testid="stRadio"] [role="radiogroup"] > label:has([aria-checked="true"]),
+        [data-testid="stRadio"] label[data-baseweb="radio"]:has([aria-checked="true"]) {{
+            background: #F8E3EB !important;
+            border-color: #D8AABD !important;
+            box-shadow: inset 0 0 0 1px rgba(216,170,189,.34) !important;
+            font-weight: 750 !important;
+        }}
+
+        [data-testid="stRadio"] [role="radiogroup"] > label p,
+        [data-testid="stRadio"] [role="radiogroup"] > label span,
+        [data-testid="stRadio"] label[data-baseweb="radio"] p,
+        [data-testid="stRadio"] label[data-baseweb="radio"] span {{
+            white-space: nowrap !important;
+            overflow-wrap: normal !important;
+            word-break: keep-all !important;
+            font-size: 11.5px !important;
+            color: var(--taupe) !important;
+            margin: 0 !important;
+        }}
+
         .empty-state {{
             text-align: center;
             background: rgba(255,255,255,.88);

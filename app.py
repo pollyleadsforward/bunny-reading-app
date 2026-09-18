@@ -10708,6 +10708,178 @@ def inject_css():
             color: var(--taupe) !important;
         }}
 
+
+        /* ---------- CHINESE VOCABULARY READER ---------- */
+        .vocab-reader {{
+            --reader-font-size: 18px;
+            margin: 4px 0 10px;
+        }}
+
+        .vocab-intro {{
+            margin: 0 0 9px;
+            padding: 9px 11px;
+            border-radius: 14px;
+            background: #FFF9F5;
+            border: 1px solid #EEE2DB;
+            color: var(--muted) !important;
+            font-size: calc(var(--reader-font-size) * .78);
+            line-height: 1.42;
+        }}
+
+        .vocab-list {{
+            display: flex;
+            flex-direction: column;
+            gap: 7px;
+        }}
+
+        .vocab-card {{
+            position: relative;
+            margin: 0;
+            padding: 11px 12px 10px 13px;
+            border-radius: 17px;
+            border: 1px solid #EADFD9;
+            background: rgba(255,255,255,.96);
+            box-shadow: 0 4px 13px rgba(138,116,104,.045);
+            overflow: hidden;
+        }}
+
+        .vocab-topline {{
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            min-width: 0;
+        }}
+
+        .vocab-number {{
+            flex: 0 0 auto;
+            min-width: 25px;
+            height: 25px;
+            padding: 0 6px;
+            border-radius: 999px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: #F5E8ED;
+            border: 1px solid #E7D1DA;
+            color: var(--muted) !important;
+            font-size: 11px;
+            font-weight: 750;
+            margin-top: 6px;
+        }}
+
+        .vocab-wordblock {{
+            min-width: 0;
+            flex: 1;
+        }}
+
+        .vocab-chinese {{
+            display: inline-block;
+            color: #B88FA6;
+            font-family: "Noto Sans SC", "Microsoft YaHei", "PingFang SC", Arial, sans-serif;
+            font-size: clamp(38px, calc(var(--reader-font-size) * 1.95), 56px);
+            font-weight: 800;
+            line-height: 1.06;
+            letter-spacing: .01em;
+            margin: 0;
+        }}
+
+        @supports ((-webkit-background-clip: text) or (background-clip: text)) {{
+            .vocab-chinese {{
+                background-image: var(--vocab-gradient);
+                background-size: 100% 100%;
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }}
+        }}
+
+        .vocab-pinyin {{
+            margin-top: 2px;
+            color: var(--muted) !important;
+            font-size: calc(var(--reader-font-size) * .82);
+            font-style: italic;
+            line-height: 1.25;
+        }}
+
+        .vocab-meaning {{
+            margin-top: 4px;
+            color: var(--brown) !important;
+            font-size: calc(var(--reader-font-size) * .98);
+            font-weight: 700;
+            line-height: 1.3;
+        }}
+
+        .vocab-roots {{
+            margin-top: 7px;
+            padding: 7px 9px;
+            border-radius: 12px;
+            background: linear-gradient(90deg, #FFF7F2, #FAF5FB);
+            border: 1px solid #F0E4DE;
+            color: var(--taupe) !important;
+            font-size: calc(var(--reader-font-size) * .76);
+            line-height: 1.42;
+            overflow-wrap: anywhere;
+        }}
+
+        /* ---------- CHAPTER / SUB-CATEGORY NAVIGATOR ---------- */
+        .st-key-reader_chapter_nav {{
+            margin-top: 0 !important;
+            padding: 0 1px !important;
+            min-width: 0 !important;
+            overflow: hidden !important;
+        }}
+
+        .st-key-reader_chapter_nav [role="radiogroup"] {{
+            display: flex !important;
+            flex-direction: row !important;
+            flex-wrap: nowrap !important;
+            gap: 6px !important;
+            overflow-x: auto !important;
+            overflow-y: hidden !important;
+            width: 100% !important;
+            padding: 1px 1px 5px !important;
+            scrollbar-width: none !important;
+            -webkit-overflow-scrolling: touch;
+            scroll-snap-type: x proximity;
+        }}
+
+        .st-key-reader_chapter_nav [role="radiogroup"]::-webkit-scrollbar {{
+            display: none !important;
+        }}
+
+        .st-key-reader_chapter_nav [role="radiogroup"] > label {{
+            flex: 0 0 auto !important;
+            min-height: 31px !important;
+            margin: 0 !important;
+            padding: 5px 10px !important;
+            border-radius: 999px !important;
+            border: 1px solid #E6D8D1 !important;
+            background: #FAEEF2 !important;
+            color: var(--taupe) !important;
+            scroll-snap-align: start;
+            cursor: pointer;
+            white-space: nowrap !important;
+        }}
+
+        .st-key-reader_chapter_nav [role="radiogroup"] > label:nth-child(6n+2) {{ background: #EEF4EA !important; }}
+        .st-key-reader_chapter_nav [role="radiogroup"] > label:nth-child(6n+3) {{ background: #F6ECE3 !important; }}
+        .st-key-reader_chapter_nav [role="radiogroup"] > label:nth-child(6n+4) {{ background: #F0ECFA !important; }}
+        .st-key-reader_chapter_nav [role="radiogroup"] > label:nth-child(6n+5) {{ background: #EAF3F8 !important; }}
+        .st-key-reader_chapter_nav [role="radiogroup"] > label:nth-child(6n+6) {{ background: #FBF3DF !important; }}
+
+        .st-key-reader_chapter_nav [role="radiogroup"] > label:has(input:checked) {{
+            border-color: #D8AABD !important;
+            box-shadow: inset 0 0 0 1px rgba(216,170,189,.34) !important;
+            font-weight: 750 !important;
+        }}
+
+        .st-key-reader_chapter_nav [role="radiogroup"] > label p,
+        .st-key-reader_chapter_nav [role="radiogroup"] > label span {{
+            white-space: nowrap !important;
+            font-size: 11.5px !important;
+            color: var(--taupe) !important;
+        }}
+
         .empty-state {{
             text-align: center;
             background: rgba(255,255,255,.88);
@@ -11130,18 +11302,19 @@ def inject_css():
         }}
         .st-key-reader_fixed_audio {{
             top: calc(64px + env(safe-area-inset-top, 0px)) !important;
-            height: 100px !important;
-            padding: 4px 0 !important;
+            height: 128px !important;
+            padding: 3px 0 2px !important;
             z-index: 1000 !important;
+            overflow: hidden !important;
         }}
         .block-container {{
             padding-top: calc(80px + env(safe-area-inset-top, 0px)) !important;
         }}
         .block-container:has(.st-key-reader_fixed_audio) {{
-            padding-top: calc(176px + env(safe-area-inset-top, 0px)) !important;
+            padding-top: calc(204px + env(safe-area-inset-top, 0px)) !important;
         }}
         [data-testid="stMain"] {{
-            scroll-padding-top: calc(176px + env(safe-area-inset-top, 0px));
+            scroll-padding-top: calc(204px + env(safe-area-inset-top, 0px));
         }}
 
         /* A−, A+, and Saved share the left 1/4. Audio takes the right 3/4. */
@@ -11162,7 +11335,8 @@ def inject_css():
         .st-key-reader_audio_control_row .stButton > button {{
             width: 100% !important;
             min-width: 0 !important;
-            min-height: 44px !important;
+            min-height: 40px !important;
+            height: 40px !important;
             padding-left: 0 !important;
             padding-right: 0 !important;
             font-size: 12px !important;
@@ -11666,8 +11840,8 @@ def render_tts_player(text_to_read: str):
 
         .audio-shell {
             width: 100%;
-            border-radius: 18px;
-            padding: 11px 12px 10px;
+            border-radius: 16px;
+            padding: 7px 9px 6px;
             background:
                 linear-gradient(
                     118deg,
@@ -11691,9 +11865,9 @@ def render_tts_player(text_to_read: str):
         .round-btn {
             appearance: none;
             -webkit-appearance: none;
-            width: 36px;
-            min-width: 36px;
-            height: 36px;
+            width: 32px;
+            min-width: 32px;
+            height: 32px;
             border-radius: 50%;
             border: 1px solid #DDB4C4;
             background: rgba(255, 255, 255, .62);
@@ -11781,9 +11955,9 @@ def render_tts_player(text_to_read: str):
         }
 
         .hint {
-            margin-top: 5px;
+            margin-top: 2px;
             padding-left: 2px;
-            font-size: 11px;
+            font-size: 10px;
             color: #8A7468;
             white-space: nowrap;
             overflow: hidden;
@@ -11792,8 +11966,8 @@ def render_tts_player(text_to_read: str):
 
         @media (max-width: 430px) {
             .audio-shell {
-                padding: 10px 9px 9px;
-                border-radius: 16px;
+                padding: 7px 7px 6px;
+                border-radius: 15px;
             }
 
             .top-line {
@@ -11801,10 +11975,10 @@ def render_tts_player(text_to_read: str):
             }
 
             .round-btn {
-                width: 34px;
-                min-width: 34px;
-                height: 34px;
-                font-size: 15px;
+                width: 31px;
+                min-width: 31px;
+                height: 31px;
+                font-size: 14px;
             }
 
             .percent {
@@ -12151,7 +12325,193 @@ def render_tts_player(text_to_read: str):
     """
 
     player_html = player_html.replace("__TEXT_JSON__", safe_text)
-    components.html(player_html, height=92, scrolling=False)
+    components.html(player_html, height=68, scrolling=False)
+
+
+PASTEL_VOCAB_GRADIENTS = [
+    "linear-gradient(90deg,#E9AFC3 0%,#D7B7E8 55%,#B9D7E8 100%)",
+    "linear-gradient(90deg,#C7D9B8 0%,#E4C8A8 52%,#E8B8C8 100%)",
+    "linear-gradient(90deg,#B8D6E7 0%,#CFC2EA 50%,#E8B7C8 100%)",
+    "linear-gradient(90deg,#E8C49E 0%,#E5AFC1 52%,#D0C3EB 100%)",
+    "linear-gradient(90deg,#BFD9C2 0%,#BFD8E8 48%,#D8C2E8 100%)",
+    "linear-gradient(90deg,#E9B9CD 0%,#E8D0A9 48%,#C5D8BC 100%)",
+    "linear-gradient(90deg,#D5BCE8 0%,#EAB6C6 48%,#BBD7E6 100%)",
+    "linear-gradient(90deg,#BBD7D0 0%,#E6C9A8 50%,#D8BCE7 100%)",
+]
+
+
+def _chapter_nav_label(title: str) -> str:
+    # Keep navigator pills compact while preserving recognizable chapter names.
+    cleaned = re.sub(r"\s+", " ", str(title or "Chapter")).strip()
+    cleaned = re.sub(r"^(Day\s+\d+)\s*[—–-]\s*", r"\1 · ", cleaned, flags=re.I)
+    if len(cleaned) > 34:
+        cleaned = cleaned[:33].rstrip() + "…"
+    return cleaned
+
+
+def _reader_chapter_nav_changed(nav_key: str):
+    selected = st.session_state.get(nav_key)
+    if isinstance(selected, int):
+        open_chapter(selected)
+
+
+def render_chapter_navigator(book, current_index: int):
+    # Scrollable pastel chapter/sub-category pills directly under Read Aloud.
+    chapters = book.get("chapters", [])
+    if len(chapters) <= 1:
+        return
+
+    nav_key = f"chapter_nav_{book['book_id']}"
+    if nav_key not in st.session_state or st.session_state.get(nav_key) != current_index:
+        st.session_state[nav_key] = current_index
+
+    with st.container(key="reader_chapter_nav"):
+        st.radio(
+            "Jump to sub-category",
+            options=list(range(len(chapters))),
+            format_func=lambda i: _chapter_nav_label(
+                chapters[i].get("chapter_title", f"Chapter {i + 1}")
+            ),
+            key=nav_key,
+            horizontal=True,
+            label_visibility="collapsed",
+            on_change=_reader_chapter_nav_changed,
+            args=(nav_key,),
+        )
+
+
+def _extract_thai_gloss(roots: str) -> str:
+    # Pull a concise Thai meaning from the existing bilingual root note when possible.
+    roots = str(roots or "").strip()
+    if not roots:
+        return ""
+
+    if "→" in roots:
+        tail = roots.rsplit("→", 1)[-1].strip()
+    elif " / " in roots:
+        tail = roots.split(" / ", 1)[-1].strip()
+    else:
+        tail = roots
+
+    tail = tail.split(";", 1)[0].strip()
+    if "/" in tail:
+        candidate = tail.rsplit("/", 1)[-1].strip()
+        if re.search(r"[\u0E00-\u0E7F]", candidate):
+            return candidate.strip(" .")
+
+    match = re.search(r"[\u0E00-\u0E7F][\u0E00-\u0E7F\s,()\-–—]*", tail)
+    return match.group(0).strip(" ,.-") if match else ""
+
+
+def _parse_vocab_chapter(content: str):
+    # Parse the Chinese book's existing English / Chinese / Pinyin / Roots structure.
+    lines = str(content or "").splitlines()
+    positions = []
+
+    for line_index, line in enumerate(lines):
+        match = re.match(r"^\s*(\d+)\.\s+(.+?)\s*$", line)
+        if match:
+            positions.append((line_index, int(match.group(1)), match.group(2).strip()))
+
+    if not positions:
+        return [], []
+
+    first_entry_line = positions[0][0]
+    preface = [line.strip() for line in lines[:first_entry_line] if line.strip()]
+    if preface:
+        preface = preface[1:]
+
+    entries = []
+    for position_index, (line_index, number, english) in enumerate(positions):
+        end_line = (
+            positions[position_index + 1][0]
+            if position_index + 1 < len(positions)
+            else len(lines)
+        )
+        segment = [line.strip() for line in lines[line_index + 1:end_line] if line.strip()]
+        if len(segment) < 2:
+            continue
+
+        chinese = segment[0]
+        pinyin = segment[1]
+        roots = " ".join(segment[2:]).strip()
+        entries.append(
+            {
+                "number": number,
+                "english": english,
+                "chinese": chinese,
+                "pinyin": pinyin,
+                "roots": roots,
+                "thai": _extract_thai_gloss(roots),
+            }
+        )
+
+    return preface, entries
+
+
+def _sentence_case_label(text: str) -> str:
+    text = str(text or "").strip()
+    if not text:
+        return text
+    if text[0].islower():
+        return text[0].upper() + text[1:]
+    return text
+
+
+def render_vocab_chapter(chapter, font_size: int):
+    # Compact Layout B: large Chinese, Pinyin, meaning, then root explanation.
+    preface, entries = _parse_vocab_chapter(chapter.get("content", ""))
+
+    if not entries:
+        st.markdown(
+            f'''<div class="reader-paper"><div class="reader-content" style="font-size:{font_size}px;">{escape(chapter.get("content", ""))}</div></div>''',
+            unsafe_allow_html=True,
+        )
+        return
+
+    intro_html = ""
+    if preface:
+        intro_text = " ".join(preface)
+        intro_html = f'<div class="vocab-intro">{escape(intro_text)}</div>'
+
+    cards = []
+    for item in entries:
+        gradient_index = (
+            sum(ord(ch) for ch in item["chinese"]) + item["number"] * 7
+        ) % len(PASTEL_VOCAB_GRADIENTS)
+        gradient = PASTEL_VOCAB_GRADIENTS[gradient_index]
+        english = _sentence_case_label(item["english"])
+        thai = item["thai"]
+        meaning = f"{english} · {thai}" if thai else english
+        roots = item["roots"] or "Roots: —"
+
+        cards.append(
+            f'''
+            <div class="vocab-card">
+                <div class="vocab-topline">
+                    <div class="vocab-number">{item["number"]}</div>
+                    <div class="vocab-wordblock">
+                        <div class="vocab-chinese" style="--vocab-gradient:{gradient};">{escape(item["chinese"])}</div>
+                        <div class="vocab-pinyin">{escape(item["pinyin"])}</div>
+                        <div class="vocab-meaning">{escape(meaning)}</div>
+                    </div>
+                </div>
+                <div class="vocab-roots">{escape(roots)}</div>
+            </div>
+            '''
+        )
+
+    st.markdown(
+        f'''
+        <div class="vocab-reader" style="--reader-font-size:{font_size}px;">
+            {intro_html}
+            <div class="vocab-list">
+                {"".join(cards)}
+            </div>
+        </div>
+        ''',
+        unsafe_allow_html=True,
+    )
 
 
 def render_reader():
@@ -12194,6 +12554,8 @@ def render_reader():
                 with audio_cols[3]:
                     render_tts_player(chapter["content"])
 
+            # Sub-category / chapter pills stay directly beneath Read Aloud.
+            render_chapter_navigator(book, idx)
 
         reader_actions = st.columns(2, gap="small")
 
@@ -12230,16 +12592,19 @@ def render_reader():
         st.session_state.reader_notice = ""
 
     font_size = st.session_state.font_size
-    st.markdown(
-        f"""
-        <div class="reader-paper">
-            <div class="reader-content" style="font-size:{font_size}px;">
-                {escape(chapter["content"])}
+    if book.get("book_id") == "chinese-for-technical-product-managers":
+        render_vocab_chapter(chapter, font_size)
+    else:
+        st.markdown(
+            f"""
+            <div class="reader-paper">
+                <div class="reader-content" style="font-size:{font_size}px;">
+                    {escape(chapter["content"])}
+                </div>
             </div>
-        </div>
-        """,
-        unsafe_allow_html=True,
-    )
+            """,
+            unsafe_allow_html=True,
+        )
 
 
 

@@ -10240,6 +10240,11 @@ def calculate_progress(book, chapter_index: int) -> int:
 
 
 def open_book(book_id: str, chapter_index=None):
+    # Opening a book from the app should start from app state, not a stale deep-link.
+    try:
+        st.query_params.clear()
+    except Exception:
+        pass
     book = get_book(book_id)
     if not book:
         return
@@ -10777,8 +10782,8 @@ def inject_css():
             color: #B88FA6;
             font-family: "Noto Sans SC", "Microsoft YaHei", "PingFang SC", Arial, sans-serif;
             font-size: clamp(38px, calc(var(--reader-font-size) * 1.95), 56px);
-            font-weight: 800;
-            line-height: 1.06;
+            font-weight: 900;
+            line-height: 1.04;
             letter-spacing: .01em;
             margin: 0;
         }}
@@ -10971,6 +10976,79 @@ def inject_css():
             font-size: 11.5px !important;
             color: var(--taupe) !important;
             margin: 0 !important;
+        }}
+
+        /* Stable HTML chapter navigator: independent of Streamlit widget DOM. */
+        .chapter-nav-scroll {{
+            display: flex !important;
+            flex-direction: row !important;
+            flex-wrap: nowrap !important;
+            align-items: center !important;
+            gap: 7px !important;
+            width: 100% !important;
+            max-width: 100% !important;
+            overflow-x: auto !important;
+            overflow-y: hidden !important;
+            padding: 2px 1px 7px !important;
+            margin: 0 !important;
+            box-sizing: border-box !important;
+            scrollbar-width: none !important;
+            -webkit-overflow-scrolling: touch !important;
+            scroll-snap-type: x proximity;
+        }}
+
+        .chapter-nav-scroll::-webkit-scrollbar {{
+            display: none !important;
+        }}
+
+        .chapter-nav-pill {{
+            flex: 0 0 auto !important;
+            display: inline-flex !important;
+            align-items: center !important;
+            gap: 7px !important;
+            min-height: 34px !important;
+            padding: 6px 11px !important;
+            border-radius: 999px !important;
+            border: 1px solid #E6D8D1 !important;
+            background: #FAEEF2 !important;
+            color: var(--taupe) !important;
+            text-decoration: none !important;
+            white-space: nowrap !important;
+            word-break: normal !important;
+            overflow-wrap: normal !important;
+            font-size: 12px !important;
+            line-height: 1.15 !important;
+            scroll-snap-align: start;
+            box-sizing: border-box !important;
+        }}
+
+        .chapter-nav-pill:nth-child(6n+2) {{ background: #EEF4EA !important; }}
+        .chapter-nav-pill:nth-child(6n+3) {{ background: #F6ECE3 !important; }}
+        .chapter-nav-pill:nth-child(6n+4) {{ background: #F0ECFA !important; }}
+        .chapter-nav-pill:nth-child(6n+5) {{ background: #EAF3F8 !important; }}
+        .chapter-nav-pill:nth-child(6n+6) {{ background: #FBF3DF !important; }}
+
+        .chapter-nav-pill.active {{
+            background: #F8E3EB !important;
+            border-color: #D8AABD !important;
+            box-shadow: inset 0 0 0 1px rgba(216,170,189,.34) !important;
+            font-weight: 750 !important;
+        }}
+
+        .chapter-nav-dot {{
+            width: 14px !important;
+            height: 14px !important;
+            flex: 0 0 14px !important;
+            border-radius: 50% !important;
+            background: #FFFFFF !important;
+            border: 1.5px solid #C9B8AF !important;
+            box-sizing: border-box !important;
+        }}
+
+        .chapter-nav-pill.active .chapter-nav-dot {{
+            background: #F56B73 !important;
+            border: 4px solid #F56B73 !important;
+            box-shadow: inset 0 0 0 2px #FFFFFF !important;
         }}
 
         .empty-state {{
@@ -11445,6 +11523,10 @@ def render_navigation():
         for col, (page, label) in zip(cols, items):
             with col:
                 if st.button(label, key=f"nav_{page}", use_container_width=True):
+                    try:
+                        st.query_params.clear()
+                    except Exception:
+                        pass
                     if page in {"Kids", "Mommy"}:
                         st.session_state.library_audience = page
                     st.session_state.page = page
@@ -12406,14 +12488,15 @@ def render_tts_player(text_to_read: str):
 
 
 PASTEL_VOCAB_GRADIENTS = [
-    "linear-gradient(90deg,#E9AFC3 0%,#D7B7E8 55%,#B9D7E8 100%)",
-    "linear-gradient(90deg,#C7D9B8 0%,#E4C8A8 52%,#E8B8C8 100%)",
-    "linear-gradient(90deg,#B8D6E7 0%,#CFC2EA 50%,#E8B7C8 100%)",
-    "linear-gradient(90deg,#E8C49E 0%,#E5AFC1 52%,#D0C3EB 100%)",
-    "linear-gradient(90deg,#BFD9C2 0%,#BFD8E8 48%,#D8C2E8 100%)",
-    "linear-gradient(90deg,#E9B9CD 0%,#E8D0A9 48%,#C5D8BC 100%)",
-    "linear-gradient(90deg,#D5BCE8 0%,#EAB6C6 48%,#BBD7E6 100%)",
-    "linear-gradient(90deg,#BBD7D0 0%,#E6C9A8 50%,#D8BCE7 100%)",
+    # Richer pastel tones: still soft, but dark enough to read comfortably on mobile.
+    "linear-gradient(90deg,#C57F9A 0%,#A98CC7 55%,#7FAFC9 100%)",
+    "linear-gradient(90deg,#89A77D 0%,#B79363 52%,#C7849D 100%)",
+    "linear-gradient(90deg,#7FAFC8 0%,#9C85BC 50%,#C47E98 100%)",
+    "linear-gradient(90deg,#B88B58 0%,#C47792 52%,#9B84BA 100%)",
+    "linear-gradient(90deg,#86A57C 0%,#7EA9BD 48%,#9A84B8 100%)",
+    "linear-gradient(90deg,#C5829C 0%,#B99463 48%,#88A57C 100%)",
+    "linear-gradient(90deg,#9B83BB 0%,#C67D98 48%,#79A9C2 100%)",
+    "linear-gradient(90deg,#789F98 0%,#B49161 50%,#9981B5 100%)",
 ]
 
 
@@ -12426,35 +12509,31 @@ def _chapter_nav_label(title: str) -> str:
     return cleaned
 
 
-def _reader_chapter_nav_changed(nav_key: str):
-    selected = st.session_state.get(nav_key)
-    if isinstance(selected, int):
-        open_chapter(selected)
-
-
 def render_chapter_navigator(book, current_index: int):
-    # Scrollable pastel chapter/sub-category pills directly under Read Aloud.
+    """Render stable HTML pills that look identical on local, Cloud, and mobile.
+
+    We intentionally avoid st.radio here because Streamlit Cloud and local builds
+    can produce different radio DOM structures, which made the mobile labels wrap
+    into fragments. Links use query parameters and are handled in main().
+    """
     chapters = book.get("chapters", [])
     if len(chapters) <= 1:
         return
 
-    nav_key = f"chapter_nav_{book['book_id']}"
-    if nav_key not in st.session_state or st.session_state.get(nav_key) != current_index:
-        st.session_state[nav_key] = current_index
-
-    with st.container(key="reader_chapter_nav"):
-        st.radio(
-            "Jump to sub-category",
-            options=list(range(len(chapters))),
-            format_func=lambda i: _chapter_nav_label(
-                chapters[i].get("chapter_title", f"Chapter {i + 1}")
-            ),
-            key=nav_key,
-            horizontal=True,
-            label_visibility="collapsed",
-            on_change=_reader_chapter_nav_changed,
-            args=(nav_key,),
+    pills = []
+    for i, chapter in enumerate(chapters):
+        label = escape(_chapter_nav_label(chapter.get("chapter_title", f"Chapter {i + 1}")))
+        active = " active" if i == current_index else ""
+        href = f"?reader_book={book['book_id']}&reader_chapter={i}"
+        pills.append(
+            f'<a class="chapter-nav-pill{active}" href="{href}" target="_self">'
+            f'<span class="chapter-nav-dot"></span><span>{label}</span></a>'
         )
+
+    st.markdown(
+        '<div class="chapter-nav-scroll">' + ''.join(pills) + '</div>',
+        unsafe_allow_html=True,
+    )
 
 
 def _extract_thai_gloss(roots: str) -> str:
@@ -12705,10 +12784,47 @@ def render_bookmarks():
 
 
 # =========================================================
+# READER DEEP-LINK / CHAPTER NAVIGATION
+# =========================================================
+def apply_reader_query_navigation():
+    """Apply chapter-pill links before rendering the page."""
+    try:
+        book_id = st.query_params.get("reader_book")
+        chapter_raw = st.query_params.get("reader_chapter")
+    except Exception:
+        return
+
+    if not book_id or chapter_raw is None:
+        return
+
+    book = get_book(str(book_id))
+    if not book or not book.get("chapters"):
+        return
+
+    try:
+        chapter_index = int(chapter_raw)
+    except (TypeError, ValueError):
+        return
+
+    chapter_index = max(0, min(chapter_index, len(book["chapters"]) - 1))
+    st.session_state.current_book_id = book["book_id"]
+    st.session_state.library_audience = book_audience(book)
+    st.session_state.page = "Reader"
+
+    if st.session_state.current_chapter_index != chapter_index:
+        st.session_state.current_chapter_index = chapter_index
+        st.session_state.last_read[book["book_id"]] = chapter_index
+        ok, error = persist_progress(book["book_id"], chapter_index)
+        if not ok and storage_is_configured():
+            st.session_state.storage_error = error or "Could not save reading progress."
+
+
+# =========================================================
 # APP ROUTER
 # =========================================================
 def main():
     initialize_state()
+    apply_reader_query_navigation()
     inject_css()
 
     render_navigation()

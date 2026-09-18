@@ -11271,22 +11271,6 @@ def inject_css():
             border-color: #DFD8F3 !important;
             color: var(--taupe) !important;
         }}
-        .st-key-prev_chapter.stButton > button,
-        .st-key-prev_chapter.stButton > button:hover,
-        .st-key-prev_chapter.stButton > button:focus,
-        .st-key-prev_chapter.stButton > button:active {{
-            background: #FFF0CE !important;
-            border-color: #FFF0CE !important;
-            color: var(--taupe) !important;
-        }}
-        .st-key-next_chapter.stButton > button,
-        .st-key-next_chapter.stButton > button:hover,
-        .st-key-next_chapter.stButton > button:focus,
-        .st-key-next_chapter.stButton > button:active {{
-            background: #DFD8F3 !important;
-            border-color: #DFD8F3 !important;
-            color: var(--taupe) !important;
-        }}
         /* Fixed controls, with matching space above the scrollable content. */
         .st-key-bunny_navigation,
         .st-key-reader_fixed_audio {{
@@ -12536,7 +12520,7 @@ def render_reader():
     progress = calculate_progress(book, idx)
 
     # Main reader controls stay at the top so they are reachable without scrolling.
-    # Audio becomes a touch-friendly seek bar. Previous / Next remain directly below it.
+    # Chapter movement is handled by the sub-category navigator beneath Read Aloud.
     with st.container(key="reader_top_actions"):
         with st.container(key="reader_fixed_audio"):
             with st.container(key="reader_audio_control_row"):
@@ -12564,19 +12548,6 @@ def render_reader():
             # Sub-category / chapter pills stay directly beneath Read Aloud.
             render_chapter_navigator(book, idx)
 
-        reader_actions = st.columns(2, gap="small")
-
-        with reader_actions[0]:
-            prev_disabled = idx <= 0
-            if st.button("← Previous", key="prev_chapter", disabled=prev_disabled, use_container_width=True):
-                open_chapter(idx - 1)
-                st.rerun()
-
-        with reader_actions[1]:
-            next_disabled = idx >= len(book["chapters"]) - 1
-            if st.button("Next →", key="next_chapter", disabled=next_disabled, use_container_width=True):
-                open_chapter(idx + 1)
-                st.rerun()
 
     st.markdown(f"## {escape(chapter['chapter_title'])}")
 

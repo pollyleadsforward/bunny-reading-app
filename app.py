@@ -10847,6 +10847,12 @@ def inject_css():
             display: none !important;
         }}
 
+        .st-key-reader_chapter_nav [role="radiogroup"] > label > div:first-child,
+        .st-key-reader_chapter_nav label[data-baseweb="radio"] > div:first-child,
+        .st-key-reader_chapter_nav input[type="radio"] {{
+            display: none !important;
+        }}
+
         .st-key-reader_chapter_nav [role="radiogroup"] > label {{
             flex: 0 0 auto !important;
             min-height: 31px !important;
@@ -10868,6 +10874,7 @@ def inject_css():
         .st-key-reader_chapter_nav [role="radiogroup"] > label:nth-child(6n+6) {{ background: #FBF3DF !important; }}
 
         .st-key-reader_chapter_nav [role="radiogroup"] > label:has(input:checked) {{
+            background: #F8E3EB !important;
             border-color: #D8AABD !important;
             box-shadow: inset 0 0 0 1px rgba(216,170,189,.34) !important;
             font-weight: 750 !important;
@@ -12485,33 +12492,33 @@ def render_vocab_chapter(chapter, font_size: int):
         meaning = f"{english} · {thai}" if thai else english
         roots = item["roots"] or "Roots: —"
 
+        # Keep every card as one continuous HTML fragment. Streamlit Markdown can
+        # interpret indented/newline-separated HTML between sibling cards as a
+        # Markdown code block; minifying the fragment avoids that parser edge case.
         cards.append(
-            f'''
-            <div class="vocab-card">
-                <div class="vocab-topline">
-                    <div class="vocab-number">{item["number"]}</div>
-                    <div class="vocab-wordblock">
-                        <div class="vocab-chinese" style="--vocab-gradient:{gradient};">{escape(item["chinese"])}</div>
-                        <div class="vocab-pinyin">{escape(item["pinyin"])}</div>
-                        <div class="vocab-meaning">{escape(meaning)}</div>
-                    </div>
-                </div>
-                <div class="vocab-roots">{escape(roots)}</div>
-            </div>
-            '''
+            f'<div class="vocab-card">'
+            f'<div class="vocab-topline">'
+            f'<div class="vocab-number">{item["number"]}</div>'
+            f'<div class="vocab-wordblock">'
+            f'<div class="vocab-chinese" style="--vocab-gradient:{gradient};">{escape(item["chinese"])}</div>'
+            f'<div class="vocab-pinyin">{escape(item["pinyin"])}</div>'
+            f'<div class="vocab-meaning">{escape(meaning)}</div>'
+            f'</div>'
+            f'</div>'
+            f'<div class="vocab-roots">{escape(roots)}</div>'
+            f'</div>'
         )
 
-    st.markdown(
-        f'''
-        <div class="vocab-reader" style="--reader-font-size:{font_size}px;">
-            {intro_html}
-            <div class="vocab-list">
-                {"".join(cards)}
-            </div>
-        </div>
-        ''',
-        unsafe_allow_html=True,
-    )
+    # Keep the entire vocabulary reader on one HTML line. No blank lines or
+    # indentation are allowed between cards, otherwise Markdown may render the
+    # later cards literally as <div> source code.
+    vocab_html = (
+        f'<div class="vocab-reader" style="--reader-font-size:{font_size}px;">'
+        f'{intro_html}'
+        f'<div class="vocab-list">{"".join(cards)}</div>'
+        f'</div>'
+    ).replace("\n", "")
+    st.markdown(vocab_html, unsafe_allow_html=True)
 
 
 def render_reader():
@@ -12595,16 +12602,13 @@ def render_reader():
     if book.get("book_id") == "chinese-for-technical-product-managers":
         render_vocab_chapter(chapter, font_size)
     else:
-        st.markdown(
-            f"""
-            <div class="reader-paper">
-                <div class="reader-content" style="font-size:{font_size}px;">
-                    {escape(chapter["content"])}
-                </div>
-            </div>
-            """,
-            unsafe_allow_html=True,
+        reader_html = (
+            f'<div class="reader-paper">'
+            f'<div class="reader-content" style="font-size:{font_size}px;">'
+            f'{escape(chapter["content"])}'
+            f'</div></div>'
         )
+        st.markdown(reader_html, unsafe_allow_html=True)
 
 
 

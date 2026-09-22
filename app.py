@@ -6769,49 +6769,49 @@ DEMO_BOOKS = [{'book_id': 'technical-product-manager-ai-llm',
                            'Your goal is not to sound like anyone else.\n'
                            '\n'
                            'Your goal is to sound unmistakably like yourself—only clearer.'}]},
- {'book_id': 'talk-with-matthew',
-  'title': 'คุยกับน้องแม็ท',
+ {'book_id': 'talk-with-Mika',
+  'title': 'คุยกับน้องมีก้า',
   'subtitle': 'Bedtime & Growing Up Stories',
   'author': 'Polly Chen',
   'content_type': 'Book',
   'category': 'Family',
-  'description': 'เรื่องสั้นสำหรับคุยกับน้องแม็ทก่อนนอนและช่วยฝึกการดูแลตัวเอง',
+  'description': 'เรื่องสั้นสำหรับคุยกับน้องมีก้าก่อนนอนและช่วยฝึกการดูแลตัวเอง',
   'cover_emoji': '🐰',
-  'chapters': [{'chapter_id': 'matthew-bedtime',
-                'chapter_title': 'น้องแม็ทเข้านอนให้ไว',
+  'chapters': [{'chapter_id': 'Mika-bedtime',
+                'chapter_title': 'น้องมีก้าเข้านอนให้ไว',
                 'order': 1,
                 'content': '\n'
                            '\n'
-                           'Matthew, Teacher Gift said that Matthew should go to bed early.   Its time '
+                           'Mika, Teacher Gift said that Mika should go to bed early.   Its time '
                            'for us to take a shower and brush our teeth now.\n'
                            '\n'
                            'Its time to drink your milk and get ready for bed. Once its bedtime, we '
                            'wont play anymore.\n'
                            '\n'
-                           'Annalu also said that Matthew will be a good boy.\n'
+                           'Annalu also said that Mika will be a good boy.\n'
                            '\n'
                            'Tonight, lets finish everything quickly, okay? Take a nice shower, brush '
                            'your teeth well, put on your pajamas, and get into bed.\n'
                            '\n'
                            'Before bedtime, we can choose one story, and Mommy will read it to '
-                           'Matthew.\n'
+                           'Mika.\n'
                            '\n'
                            'When the story is finished, well turn off the light, close our eyes, and '
                            'let our bodies rest and grow strong.\n'
                            '\n'
-                           'If Matthew goes to bed early, tomorrow morning youll wake up feeling fresh. '
+                           'If Mika goes to bed early, tomorrow morning youll wake up feeling fresh. '
                            'Youll have lots of energy to go to school, play with your friends, and '
                            'learn new things.\n'
                            '\n'
-                           'Teacher Gift will be happy that Matthew gets enough rest.\n'
+                           'Teacher Gift will be happy that Mika gets enough rest.\n'
                            '\n'
-                           'Mommy will be happy too, because Matthew is learning how to take care of '
+                           'Mommy will be happy too, because Mika is learning how to take care of '
                            'himself.\n'
                            '\n'
                            'Tonight, you dont have to fall asleep right away. Just lie still, hug your '
                            'pillow, breathe slowly, and relax.\n'
                            '\n'
-                           'Good night, Matthew.\n'
+                           'Good night, Mika.\n'
                            '\n'
                            'You did a good job today.\n'
                            '\n'
@@ -6824,7 +6824,7 @@ DEMO_BOOKS = [{'book_id': 'technical-product-manager-ai-llm',
                            '\n'
                            'ถึงเวลากินนมนอนให้นอนเราจะไม่เล่นแล้วนะคะ\n'
                            '\n'
-                           'Annalu also saids Matthew will be a good boy.\n'
+                           'Annalu also saids Mika will be a good boy.\n'
                            '\n'
                            'คืนนี้น้องแม็ททำทุกอย่างให้เสร็จเร็ว ๆ นะคะ อาบน้ำให้สะอาด แปรงฟันให้สะอาด '
                            'ใส่ชุดนอน แล้วขึ้นเตียง\n'
@@ -6843,12 +6843,12 @@ DEMO_BOOKS = [{'book_id': 'technical-product-manager-ai-llm',
                            'คืนนี้เราไม่ต้องรีบนอนให้หลับทันทีนะคะ แค่นอนนิ่ง ๆ กอดหมอน หายใจช้า ๆ '
                            'แล้วพักผ่อน\n'
                            '\n'
-                           'Good night, Matthew.\n'
+                           'Good night, Mika.\n'
                            '\n'
                            'You did a good job today.\n'
                            '\n'
                            'Tomorrow is another happy day.'},
-               {'chapter_id': 'matthew-can-do-it',
+               {'chapter_id': 'Mika-can-do-it',
                 'chapter_title': 'น้องแม็ททำเองได้',
                 'order': 2,
                 'content': 'น้องแม็ทโตขึ้นทุกวันแล้วนะคะ และมีหลายอย่างที่น้องแม็ทสามารถทำเองได้\n'
@@ -6890,13 +6890,13 @@ DEMO_BOOKS = [{'book_id': 'technical-product-manager-ai-llm',
                            '\n'
                            'Tomorrow, lets try again.\n'
                            '\n'
-                           'Matthew can learn.\n'
+                           'Mika can learn.\n'
                            '\n'
-                           'Matthew can ask.\n'
+                           'Mika can ask.\n'
                            '\n'
-                           'Matthew can try.\n'
+                           'Mika can try.\n'
                            '\n'
-                           'And Matthew can do more and more by himself.'}],
+                           'And Mika can do more and more by himself.'}],
   'audience': 'Kids'},
  {'book_id': 'milo-and-the-little-blue-star',
   'title': 'Milo and the Little Blue Star',
